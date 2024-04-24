@@ -56,28 +56,72 @@ Many state-of-the-art models for vision tasks, such as image classification and 
 To address the challenges of large parameter models and enable efficient deployment on edge devices, there is a growing interest in developing more compact and computationally efficient architectures. One promising approach is the Mamba architecture, which is based on Structured State Space Sequence Models (SSMs) \cite{gu2022efficiently}. Mamba combines the modeling power of Transformers with the linear scalability of SSMs, allowing it to efficiently process long sequences while maintaining high performance \cite{gu2023mamba}. By leveraging selective state spaces, Mamba can achieve competitive results with significantly fewer parameters compared to Transformers and other large models.
 
 In this paper, we explore the application of Mamba for vision tasks, specifically image segmentation and classification. We aim to demonstrate that Mamba-based models can achieve high accuracy while keeping parameter counts low, making them suitable for deployment on edge devices and contributing to the development of more sustainable and efficient AI solutions. We compare the performance of Mamba against state-of-the-art models and discuss the potential of this approach for enabling intelligent applications on resource-constrained devices.
+\section{Current Vision Task SOTA}
+Over the past decade, deep learning has revolutionized the field of computer vision, with various architectures achieving state-of-the-art (SOTA) performance on tasks such as image classification and segmentation. Convolutional Neural Networks (CNNs) have been at the forefront of this revolution, with architectures like AlexNet \cite{krizhevsky2012imagenet}, VGGNet \cite{simonyan2014very}, and Inception \cite{szegedy2015going} pushing the boundaries of classification accuracy on large-scale datasets like ImageNet.
+One of the most significant advancements in CNNs came with the introduction of ResNet \cite{he2016deep}, which addressed the problem of vanishing gradients in deep networks by introducing residual connections. ResNets allowed for the training of much deeper networks, leading to improved performance on various vision tasks. The success of ResNet sparked a wave of research into more efficient and effective CNN architectures, such as MobileNet \cite{howard2017mobilenets}, EfficientNet \cite{tan2019efficientnet}, and RegNet \cite{radosavovic2020designing}.
+While CNNs have been highly successful in vision tasks, they struggle to capture long-range dependencies and global context, which are crucial for understanding complex scenes and objects. To address this limitation, the Vision Transformer (ViT) \cite{dosovitskiy2021image} was introduced, adapting the self-attention mechanism from natural language processing to vision tasks. ViT treats an image as a sequence of patches and applies multi-head self-attention to learn global relationships between these patches. ViT has achieved impressive results on image classification tasks, often outperforming CNNs while requiring less inductive bias.
+Building upon the success of ViT, several transformer-based architectures have been proposed for other vision tasks, such as image segmentation. SegFormer \cite{xie2021segformer} is a transformer-based model for semantic segmentation that employs a hierarchical structure and a novel attention mechanism called Efficient Self-Attention (ESA). ESA reduces the computational complexity of self-attention by performing attention operations in a local window and aggregating global information through a depth-wise convolution. This allows SegFormer to efficiently process high-resolution images while capturing both local and global context.
+Despite the impressive performance of these SOTA models, they often come with a high computational cost and large number of parameters. The self-attention mechanism in transformers scales quadratically with the input sequence length, making them challenging to apply to long sequences or high-resolution images \cite{choromanski2020rethinking}. CNNs, while more efficient than transformers, still require a significant number of parameters to achieve SOTA performance, especially for complex tasks like segmentation.
+The high parameter counts and scaling issues of these models pose challenges for deployment on resource-constrained devices and raise concerns about energy consumption. As the demand for efficient and sustainable AI solutions grows, there is a pressing need for more compact and computationally efficient architectures that can maintain high accuracy while reducing the parameter footprint. This has led to increased interest in techniques like model compression, quantization, and the development of novel architectures that can achieve SOTA performance with fewer parameters \cite{cheng2017survey, hinton2015distilling}.
+
+\section{State Space Models (SSMs)}
+State Space Models (SSMs) are a powerful mathematical framework for modeling and processing temporal signals. They map an input signal $u(t)$ to an output signal $y(t)$ via a latent state $x(t)$. The latent state evolves according to a linear differential equation involving the input signal and a set of matrices $(A, B, C, D)$ that define the SSM's behavior \cite{gu2022efficiently}.
+When the SSM matrices are constant over time, the system is called a Linear Time-Invariant (LTI) SSM, and it can be equivalently expressed as a convolution between the input signal and the SSM's impulse response function $K(t)$. This convolutional form makes LTI SSMs particularly efficient to compute, which is crucial for their application in modern deep learning models like S4 \cite{gu2022efficiently}.
+A key concept in the SSM literature is the SSM basis, which is a set of functions defined by the matrix exponential $e^{tA}B$. The output of the SSM is a linear combination of these basis functions, weighted by the coefficients in matrix $C$. The choice of the SSM basis functions determines the properties and capabilities of the SSM \cite{gu2022efficiently}.
+The HiPPO framework proposed a mathematical technique for deriving SSMs with orthogonal basis functions, such that the latent state $x(t)$ maintains a compressed representation of the entire input history. By carefully designing the SSM matrices, HiPPO derived SSMs whose basis functions could reconstruct the input signal history from the latent state, making them powerful tools for modeling long-range dependencies in sequence data \cite{gu2020hippo}.
+The Mamba model built upon the foundations laid by HiPPO, extending SSMs with a gating mechanism to enable more general sequence modeling tasks beyond signal reconstruction and memorization \cite{gu2023mamba}. The success of models like S4 and Mamba have demonstrated the potential of SSMs as a fundamental building block for efficient and expressive sequence models.
+
+\section{Mamba}
+Mamba \cite{gu2023mamba} is a recently proposed architecture that combines the modeling power of Transformers with the linear scaling efficiency of state space models (SSMs). The key idea is to augment SSMs with a selection mechanism that allows the model parameters to vary based on the input, enabling it to perform content-aware reasoning.
+Standard SSMs map an input sequence $x(t)$ to an output $y(t)$ via a latent state $h(t)$ using a linear time-invariant system:
+\begin{align*}
+h'(t) & = \mathbf{A}h(t) + \mathbf{B}x(t) \\
+y(t)  & = \mathbf{C}h(t) + \mathbf{D}x(t)
+\end{align*}
+where the parameter matrices $\mathbf{A}$, $\mathbf{B}$, $\mathbf{C}$, $\mathbf{D}$ are fixed. In the original paper, the $\mathbf{D}$ matrix is considered only as a skip connection, and thus as it does not directly play a role in the differential equation, was ignored. This allows SSMs to be computed efficiently as a convolution. However, the time-invariance means the model cannot change its behavior for specific inputs, making it difficult to solve tasks requiring selective focus, such as selective copying or induction heads \cite{gu2023mamba}.
+Mamba introduces a selection mechanism where the SSM parameters $\mathbf{B}$, $\mathbf{C}$, $\Delta$ (the state step size) vary for each input token $x_t$. This allows the model to selectively propagate or forget information based on the current token. The selective SSM is computed using a parallel scan operation to maintain linear complexity.
+The Mamba block interleaves the selective SSM with linear projections, convolutions, and activations:
+\begin{enumerate}
+\item Linear projection to expand the embedding dimension
+\item Convolution to mix information between dimensions
+\item Selective SSM via parallel scan to efficiently propagate information
+\item Linear projection to get back to the target embedding size
+\end{enumerate}
+These blocks are stacked to form the Mamba architecture. Compared to Transformers, Mamba can achieve comparable modeling performance while scaling linearly in sequence length rather than quadratically \cite{gu2023mamba}. Overall, the selective SSM leverages the strengths of RNNs, CNNs and Transformers - it maintains an unbounded context window like RNNs, can be parallelized like CNNs, and achieves content-aware reasoning like Transformers, while being more efficient than all three. This makes Mamba a promising foundation model for processing long sequences across various domains.
+
+\section{Application: Image Segmentation}
+
+\section{Application: Image Classsification}
+
+\section{Conclusion}
+
 
 \begin{thebibliography}{00}
-    \bibitem{brown2020language}
-    T. B. Brown et al., "Language Models are Few-Shot Learners," arXiv:2005.14165 [cs.CL], 2020.
-    \bibitem{dosovitskiy2021image}
-    A. Dosovitskiy et al., "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale," arXiv:2010.11929 [cs.CV], 2021.
-    \bibitem{warden2019tinyml}
-    P. Warden and D. Situnayake, "TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers," O'Reilly Media, Inc., 2019.
-    \bibitem{banbury2021benchmarking}
-    C. R. Banbury et al., "MLPerf Tiny Benchmark," arXiv:2106.07597 [cs.LG], 2021.
-    \bibitem{ronneberger2015unet}
-    O. Ronneberger, P. Fischer, and T. Brox, "U-Net: Convolutional Networks for Biomedical Image Segmentation," arXiv:1505.04597 [cs.CV], 2015.
-    \bibitem{he2016deep}
-    K. He, X. Zhang, S. Ren, and J. Sun, "Deep Residual Learning for Image Recognition," arXiv:1512.03385 [cs.CV], 2016.
-    \bibitem{vaswani2017attention}
-    A. Vaswani et al., "Attention Is All You Need," arXiv:1706.03762 [cs.CL], 2017.
-    \bibitem{choromanski2020rethinking}
-    K. Choromanski et al., "Rethinking Attention with Performers," arXiv:2009.14794 [cs.LG], 2020.
-    \bibitem{gu2022efficiently}
-    A. Gu, K. Goel, and C. Ré, "Efficiently Modeling Long Sequences with Structured State Spaces," arXiv:2111.00396 [cs.LG], 2022.
-    \bibitem{gu2023mamba}
-    A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with Selective State Spaces," arXiv:2312.00752 [cs.LG], 2023.
+\bibitem{brown2020language} T. B. Brown et al., "Language Models are Few-Shot Learners," arXiv:2005.14165 [cs.CL], 2020.
+\bibitem{dosovitskiy2021image} A. Dosovitskiy et al., "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale," arXiv:2010.11929 [cs.CV], 2021.
+\bibitem{warden2019tinyml} P. Warden and D. Situnayake, "TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers," O'Reilly Media, Inc., 2019.
+\bibitem{banbury2021benchmarking} C. R. Banbury et al., "MLPerf Tiny Benchmark," arXiv:2106.07597 [cs.LG], 2021.
+\bibitem{ronneberger2015unet} O. Ronneberger, P. Fischer, and T. Brox, "U-Net: Convolutional Networks for Biomedical Image Segmentation," arXiv:1505.04597 [cs.CV], 2015.
+\bibitem{he2016deep} K. He, X. Zhang, S. Ren, and J. Sun, "Deep Residual Learning for Image Recognition," arXiv:1512.03385 [cs.CV], 2016.
+\bibitem{vaswani2017attention} A. Vaswani et al., "Attention Is All You Need," arXiv:1706.03762 [cs.CL], 2017.
+\bibitem{choromanski2020rethinking} K. Choromanski et al., "Rethinking Attention with Performers," arXiv:2009.14794 [cs.LG], 2020.
+\bibitem{gu2022efficiently} A. Gu, K. Goel, and C. Ré, "Efficiently Modeling Long Sequences with Structured State Spaces," arXiv:2111.00396 [cs.LG], 2022.
+\bibitem{gu2023mamba} A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with Selective State Spaces," arXiv:2312.00752 [cs.LG], 2023.
+\bibitem{krizhevsky2012imagenet} - ImageNet Classification with Deep Convolutional Neural Networks
+\bibitem{simonyan2014very} - Very Deep Convolutional Networks for Large-Scale Image Recognition
+\bibitem{szegedy2015going} - Going Deeper with Convolutions
+\bibitem{he2016deep} - Deep Residual Learning for Image Recognition
+\bibitem{howard2017mobilenets} - MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications
+\bibitem{tan2019efficientnet} - EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
+\bibitem{radosavovic2020designing} - Designing Network Design Spaces
+\bibitem{dosovitskiy2021image} - An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale
+\bibitem{xie2021segformer} - SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers
+\bibitem{choromanski2020rethinking} - Rethinking Attention with Performers
+\bibitem{cheng2017survey} - A Survey of Model Compression and Acceleration for Deep Neural Networks
+\bibitem{hinton2015distilling} - Distilling the Knowledge in a Neural Network
+\bibitem{gu2022efficiently} A. Gu, K. Goel, and C. Ré, "Efficiently Modeling Long Sequences with Structured State Spaces," arXiv preprint arXiv:2111.00396, 2022.
+\bibitem{gu2020hippo} A. Gu, T. Dao, S. Ermon, A. Rudra, and C. Ré, "HiPPO: Recurrent Memory with Optimal Polynomial Projections," Advances in Neural Information Processing Systems, vol. 33, pp. 1474-1487, 2020.
+\bibitem{gu2023mamba} A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with State Spaces," arXiv preprint arXiv:2302.01327, 2023.
 \end{thebibliography}
 
 \end{document}

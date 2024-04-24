@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  24 APR 2024 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  24 APR 2024 15:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -341,7 +341,23 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count293
 \l__pdf_internal_box=\box55
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `he2016deep' multiply defined.
+
+
+LaTeX Warning: Label `dosovitskiy2021image' multiply defined.
+
+
+LaTeX Warning: Label `choromanski2020rethinking' multiply defined.
+
+
+LaTeX Warning: Label `gu2022efficiently' multiply defined.
+
+
+LaTeX Warning: Label `gu2023mamba' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -399,8 +415,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
-]
-Underfull \hbox (badness 2197) in paragraph at lines 76--77
+] [2]
+Underfull \hbox (badness 2197) in paragraph at lines 107--108
 []\OT1/ptm/m/n/8 K. Choro-man-ski et al., "Re-think-ing At-ten-tion with Per-form-ers,"
  []
 
@@ -415,25 +431,51 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
+[3
+pdfTeX warning (ext4): destination with the same identifier (name{cite.he2016deep}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.127 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.dosovitskiy2021image}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.127 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.choromanski2020rethinking}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.127 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2022efficiently}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.127 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2023mamba}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.127 \end{document}
+                    ] (./main.aux)
 
-] (./main.aux)
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 687EC4E01B981F02BDBBA6B188492470;197.
+(rerunfilecheck)             Checksum: 1D6B84F9057698B7B303D58650E1B399;1136.
  ) 
 Here is how much of TeX's memory you used:
- 10991 strings out of 476025
- 173957 string characters out of 5790017
- 1876388 words of memory out of 5000000
- 31289 multiletter control sequences out of 15000+600000
- 548234 words of font info for 107 fonts, out of 8000000 for 9000
+ 11039 strings out of 476025
+ 174654 string characters out of 5790017
+ 1880388 words of memory out of 5000000
+ 31313 multiletter control sequences out of 15000+600000
+ 550215 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,76p,892b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 68994 bytes).
+ 75i,10n,76p,892b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (3 pages, 123094 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 168 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
