@@ -696,6 +696,11 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT ./imgs/cifar_100.jpg
+INPUT ./imgs/cifar_100.jpg
+INPUT imgs/cifar_100.jpg
+INPUT ./imgs/cifar_100.jpg
+INPUT ./imgs/cifar_100.jpg
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

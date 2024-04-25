@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1714045229 "/Users/lexingtonwhalen/Desktop/d/personal/school/grad/usc/mamba-vs-else-vision/paper/main.tex" "main.pdf" "main" 1714045230 0
-  "/Users/lexingtonwhalen/Desktop/d/personal/school/grad/usc/mamba-vs-else-vision/paper/main.tex" 1714045228 34344 1141babf7489b76fc89354af68afc7b1 ""
+["pdflatex"] 1714046920 "/Users/lexingtonwhalen/Desktop/d/personal/school/grad/usc/mamba-vs-else-vision/paper/main.tex" "main.pdf" "main" 1714046921 0
+  "/Users/lexingtonwhalen/Desktop/d/personal/school/grad/usc/mamba-vs-else-vision/paper/main.tex" 1714046918 38252 677b122c4c98405cde915346fd780027 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -112,11 +112,12 @@
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1686461055 7883456 2671d7d74b408aece8db38e110a3c44d ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "imgs/balls.png" 1713949216 52508 b880f18c0856f6b48a8e39ec8b07b69a ""
+  "imgs/cifar_100.jpg" 1714046878 178023 472dd4e7c5b17a8bd6ae9904cf23643e ""
   "imgs/data_stats.png" 1713819662 52795 c98e5756719d3f8c9236800ad47a8459 ""
   "imgs/masks.png" 1713630615 423116 f14cba0e4db28a38bd6eec0c8585f882 ""
-  "main.aux" 1714045230 7439 5221d82cfa20a3c01bbda16b0bcf0dff "pdflatex"
-  "main.out" 1714045230 2919 9f8763663f536038c2d3684ad0f3d1e3 "pdflatex"
-  "main.tex" 1714045228 34344 1141babf7489b76fc89354af68afc7b1 ""
+  "main.aux" 1714046921 8065 db5e8653c5d3047b604b4f6b3f2ed72e "pdflatex"
+  "main.out" 1714046921 2914 1b189da2656f0f0a927ad54a7dd9e272 "pdflatex"
+  "main.tex" 1714046918 38252 677b122c4c98405cde915346fd780027 ""
   (generated)
   "main.aux"
   "main.log"
