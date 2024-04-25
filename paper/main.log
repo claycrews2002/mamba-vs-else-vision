@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  24 APR 2024 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.11)  25 APR 2024 07:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -357,6 +357,21 @@ LaTeX Warning: Label `gu2022efficiently' multiply defined.
 
 LaTeX Warning: Label `gu2023mamba' multiply defined.
 
+
+LaTeX Warning: Label `ronneberger2015unet' multiply defined.
+
+
+LaTeX Warning: Label `gu2022efficiently' multiply defined.
+
+
+LaTeX Warning: Label `gu2023mamba' multiply defined.
+
+
+LaTeX Warning: Label `dosovitskiy2021image' multiply defined.
+
+
+LaTeX Warning: Label `xie2021segformer' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -416,8 +431,39 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ] [2]
-Underfull \hbox (badness 2197) in paragraph at lines 107--108
+<imgs/data_stats.png, id=173, 571.13374pt x 992.70876pt>
+File: imgs/data_stats.png Graphic file (type png)
+<use imgs/data_stats.png>
+Package pdftex.def Info: imgs/data_stats.png  used on input line 105.
+(pdftex.def)             Requested size: 252.0pt x 438.005pt.
+ [3 <./imgs/data_stats.png (PNG copy)>]
+Underfull \hbox (badness 2744) in paragraph at lines 130--131
+\OT1/ptm/m/n/10 mil-lion pa-ram-e-ters and a com-pu-ta-tional cost of 0.060
+ []
+
+[4]
+Underfull \hbox (badness 3492) in paragraph at lines 158--159
+[]\OT1/ptm/m/n/10 ULMUNet[]v3 com-bines the mod-i-fi-ca-tions from UL-
+ []
+
+<imgs/balls.png, id=214, 990.70125pt x 592.2125pt>
+File: imgs/balls.png Graphic file (type png)
+<use imgs/balls.png>
+Package pdftex.def Info: imgs/balls.png  used on input line 199.
+(pdftex.def)             Requested size: 252.0pt x 150.63718pt.
+<imgs/masks.png, id=215, 793.96625pt x 494.84875pt>
+File: imgs/masks.png Graphic file (type png)
+<use imgs/masks.png>
+Package pdftex.def Info: imgs/masks.png  used on input line 206.
+(pdftex.def)             Requested size: 252.0pt x 157.06364pt.
+[5 <./imgs/balls.png (PNG copy)>]
+Underfull \hbox (badness 2197) in paragraph at lines 224--225
 []\OT1/ptm/m/n/8 K. Choro-man-ski et al., "Re-think-ing At-ten-tion with Per-form-ers,"
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+[]\OT1/ptm/m/n/8 \Brain MRI seg-men-ta-tion," www.kaggle.com.
  []
 
 
@@ -431,51 +477,76 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3
+[6
 pdfTeX warning (ext4): destination with the same identifier (name{cite.he2016deep}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.127 \end{document}
+l.270 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{cite.dosovitskiy2021image}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.127 \end{document}
+l.270 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{cite.choromanski2020rethinking}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.127 \end{document}
+l.270 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2022efficiently}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.127 \end{document}
+l.270 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2023mamba}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.127 \end{document}
-                    ] (./main.aux)
+l.270 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.ronneberger2015unet}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.270 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2022efficiently}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.270 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2023mamba}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.270 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.dosovitskiy2021image}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.270 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.xie2021segformer}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.270 \end{document}
+                     <./imgs/masks.png>] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1D6B84F9057698B7B303D58650E1B399;1136.
+(rerunfilecheck)             Checksum: 9F8763663F536038C2D3684AD0F3D1E3;2919.
  ) 
 Here is how much of TeX's memory you used:
- 11039 strings out of 476025
- 174654 string characters out of 5790017
+ 11136 strings out of 476025
+ 176156 string characters out of 5790017
  1880388 words of memory out of 5000000
- 31313 multiletter control sequences out of 15000+600000
- 550215 words of font info for 115 fonts, out of 8000000 for 9000
+ 31368 multiletter control sequences out of 15000+600000
+ 553667 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,76p,892b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,76p,1521b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 123094 bytes).
+Output written on main.pdf (6 pages, 565616 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 259 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 

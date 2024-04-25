@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1713987467 "/Users/lexingtonwhalen/Desktop/d/personal/school/grad/usc/mamba-vs-else-vision/paper/main.tex" "main.pdf" "main" 1713987468 0
-  "/Users/lexingtonwhalen/Desktop/d/personal/school/grad/usc/mamba-vs-else-vision/paper/main.tex" 1713987467 17531 b992b1d26f69f1a1aa75a0a572936bb1 ""
+["pdflatex"] 1714045229 "/Users/lexingtonwhalen/Desktop/d/personal/school/grad/usc/mamba-vs-else-vision/paper/main.tex" "main.pdf" "main" 1714045230 0
+  "/Users/lexingtonwhalen/Desktop/d/personal/school/grad/usc/mamba-vs-else-vision/paper/main.tex" 1714045228 34344 1141babf7489b76fc89354af68afc7b1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -22,7 +22,9 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1136768653 1332 f817c21a1ba54560425663374f1b651a ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1136768653 1344 8a0be4fe4d376203000810ad4dc81558 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1136768653 1336 3125ccb448c1a09074e3aa4a9832f130 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1136768653 1332 1fde11373e221473104d6cc5993f046e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -109,9 +111,12 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1686461107 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1686461055 7883456 2671d7d74b408aece8db38e110a3c44d ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "main.aux" 1713987468 3157 906bf34ec7fec93247d3480ff4df98e6 "pdflatex"
-  "main.out" 1713987468 1136 1d6b84f9057698b7b303d58650e1b399 "pdflatex"
-  "main.tex" 1713987467 17531 b992b1d26f69f1a1aa75a0a572936bb1 ""
+  "imgs/balls.png" 1713949216 52508 b880f18c0856f6b48a8e39ec8b07b69a ""
+  "imgs/data_stats.png" 1713819662 52795 c98e5756719d3f8c9236800ad47a8459 ""
+  "imgs/masks.png" 1713630615 423116 f14cba0e4db28a38bd6eec0c8585f882 ""
+  "main.aux" 1714045230 7439 5221d82cfa20a3c01bbda16b0bcf0dff "pdflatex"
+  "main.out" 1714045230 2919 9f8763663f536038c2d3684ad0f3d1e3 "pdflatex"
+  "main.tex" 1714045228 34344 1141babf7489b76fc89354af68afc7b1 ""
   (generated)
   "main.aux"
   "main.log"
