@@ -13,3 +13,4 @@ mamba/build/
 mamba/mamba_ssm.egg-info/
 mamba/selective_scan_cuda.cpython-310-x86_64-linux-gnu.so
 data/
+checkpoints
