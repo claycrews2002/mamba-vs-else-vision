@@ -61,7 +61,7 @@ In this paper, we provide an analysis of Mamba in comparison to the self-attenti
 
 
 \section{Current Vision Task SOTA}
-Over the past decade, deep learning has revolutionized the field of computer vision, with various architectures achieving state-of-the-art (SOTA) performance on tasks such as image classification and segmentation. Convolutional Neural Networks (CNNs) have been at the forefront of this revolution, with architectures like AlexNet \cite{krizhevsky2012imagenet}, VGGNet \cite{simonyan2014very}, and Inception \cite{szegedy2015going} pushing the boundaries of classification accuracy on large-scale datasets like ImageNet. \gr{Keep in mind we talk about ImageNet !} 
+Over the past decade, deep learning has revolutionized the field of computer vision, with various architectures achieving state-of-the-art (SOTA) performance on tasks such as image classification and segmentation. Convolutional Neural Networks (CNNs) have been at the forefront of this revolution, with architectures like AlexNet \cite{krizhevsky2012imagenet}, VGGNet \cite{simonyan2014very}, and Inception \cite{szegedy2015going} pushing the boundaries of classification accuracy on large-scale datasets like ImageNet. \gr{Keep in mind we talk about ImageNet !}
 
 CNNs function by performing convolutional operations of a kernel over the input sequence. These convolutions can be computed in parallel, making CNNs efficient. \gr{poorly worded - edit -  but need to briefly explain why CNNs are efficient and work}
 
@@ -77,7 +77,7 @@ The high parameter counts and scaling issues of these models pose challenges for
 
 
 \section{State Space Models (SSMs)}
-Structured State Space Models (SSMs or S4 models) are a powerful mathematical framework for sequence modeling and processing temporal signals that are built on State Space Models (SSMs). They map an input signal $x(t)$ to an output signal $y(t)$ via a latent state $h(t)$. The latent state evolves according to a linear differential equation involving the input signal and a set of parameter matrices $(A, B, C, D)$ that define the SSM's behavior \cite{gu2022efficiently}. 
+Structured State Space Models (SSMs or S4 models) are a powerful mathematical framework for sequence modeling and processing temporal signals that are built on State Space Models (SSMs). They map an input signal $x(t)$ to an output signal $y(t)$ via a latent state $h(t)$. The latent state evolves according to a linear differential equation involving the input signal and a set of parameter matrices $(A, B, C, D)$ that define the SSM's behavior \cite{gu2022efficiently}.
 \begin{equation}\label{eq:SSMlatent}
     h'(t) = \mathbf{A}h(t) + \mathbf{B}x(t)
 \end{equation}
@@ -94,19 +94,19 @@ is used to find the recurrent formula of the system:
 \begin{equation}
     h(t+\Delta) \cong \Delta h'(t) + h(t)
 \end{equation}
-Substituting for $h'(t)$ with \eqref{eq:SSMlatent} (the $\mathbf{D}$ matrix can be considered as a skip connection and is ignored in this calculation) and discretizing the discretized parameters of the model, the "continuous parameters" $(\Delta, \mathbf{A}, \mathbf{B})$ are transformed to "discrete parameters" $(\mbfb{A}, \mbfb{B})$
-\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}} 
+Substituting for $h'(t)$ with \eqref{eq:SSMlatent} (the $\mathbf{D}$ matrix is considered only as a skip connection, and thus as it does not directly play a role in the differential equation, was ignored) and discretizing the discretized parameters of the model, the "continuous parameters" $(\Delta, \mathbf{A}, \mathbf{B})$ are transformed to "discrete parameters" $(\mbfb{A}, \mbfb{B})$
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 \begin{align*}
-    h(t+\Delta) & \cong \Delta h'(t) + h(t)\\
-                & \cong \Delta(\mathbf{A}h(t) + \mathbf{B}x(t)) + h(t)\\
-                & \cong \Delta \mathbf{A}h(t) + \Delta \mathbf{B}x(t) + h(t)\\
-                & \cong (I + \Delta \mathbf{A})h(t) + \Delta \mathbf{B}x(t)\\
+    h(t+\Delta) & \cong \Delta h'(t) + h(t)                                              \\
+                & \cong \Delta(\mathbf{A}h(t) + \mathbf{B}x(t)) + h(t)                   \\
+                & \cong \Delta \mathbf{A}h(t) + \Delta \mathbf{B}x(t) + h(t)             \\
+                & \cong (I + \Delta \mathbf{A})h(t) + \Delta \mathbf{B}x(t)              \\
                 & \cong \mbfb{A}h(t) + \mbfb{B}x(t) \numberthis \label{eq:recurrentform}
 \end{align*}
 where $I$ is an identity matrix and the discrete parameters $(\mbfb{A}, \mbfb{B})$ are
 \begin{align*}
-    \mbfb{A} &= I + \Delta \mathbf{A}\\
-    \mbfb{B} &= \Delta \mathbf{B}
+    \mbfb{A} & = I + \Delta \mathbf{A} \\
+    \mbfb{B} & = \Delta \mathbf{B}
 \end{align*}
 we derive the recurrent equations of the system:
 \begin{equation}\label{eq:discretelatent}
@@ -120,21 +120,21 @@ The recurrent equation can be used to predict any time step given the initial st
 % Tramsformer does this in parallel
 With a initial state of 0, the convolutional representation was derived:
 \begin{align*}
-    h_0 &= \mbfb{B}x_0 \\
-    y_0 &= \mathbf{C}h_0 = \mathbf{C}\mbfb{B}x_0 \\ \\
-    h_1 &= \mbfb{A}h_0 + \mbfb{B}x_1 = \mbfb{A}\mbfb{B}x_0 + \mbfb{B}x_1 \\
-    y_1 &= \mathbf{C}h_1 = \mathbf{C}(\mbfb{A}\mbfb{B}x_0 + \mbfb{B}x_1) =  \mathbf{C}\mbfb{A}\mbfb{B}x_0 + \mathbf{C}\mbfb{B}x_1 \\ \\
-    h_2 &= \mbfb{A}h_1 + \mbfb{B}x_2 = \mbfb{A}(\mbfb{A}\mbfb{B}x_0 + \mbfb{B}x_1) + \mbfb{B}x_2 \\
-    &= \mbfb{A}^2\mbfb{B}x_0 + \mbfb{A}\mbfb{B}x_1 + \mbfb{B}x_2 \\
-    y_2 &= \mathbf{C}h_2 = \mathbf{C}(\mbfb{A}^2\mbfb{B}x_0 + \mbfb{A}\mbfb{B}x_1 + \mbfb{B}x_2) \\
-    &= \mathbf{C}\mbfb{A}^2\mbfb{B}x_0 + \mathbf{C}\mbfb{A}\mbfb{B}x_1 + \mathbf{C}\mbfb{B}x_2 \\ \\
-    y_k &= \mathbf{C}\mbfb{A}^k\mbfb{B}x_0 + \mathbf{C}\mbfb{A}^{k-1}\mbfb{B}x_1 + \cdots + \mathbf{C}\mbfb{A}\mbfb{B}x_{k-1} + \mathbf{C}\mbfb{B}x_k \numberthis \label{eq:convolutionalform}
+    h_0 & = \mbfb{B}x_0                                                                                                                                                                         \\
+    y_0 & = \mathbf{C}h_0 = \mathbf{C}\mbfb{B}x_0                                                                                                                                               \\ \\
+    h_1 & = \mbfb{A}h_0 + \mbfb{B}x_1 = \mbfb{A}\mbfb{B}x_0 + \mbfb{B}x_1                                                                                                                       \\
+    y_1 & = \mathbf{C}h_1 = \mathbf{C}(\mbfb{A}\mbfb{B}x_0 + \mbfb{B}x_1) =  \mathbf{C}\mbfb{A}\mbfb{B}x_0 + \mathbf{C}\mbfb{B}x_1                                                              \\ \\
+    h_2 & = \mbfb{A}h_1 + \mbfb{B}x_2 = \mbfb{A}(\mbfb{A}\mbfb{B}x_0 + \mbfb{B}x_1) + \mbfb{B}x_2                                                                                               \\
+        & = \mbfb{A}^2\mbfb{B}x_0 + \mbfb{A}\mbfb{B}x_1 + \mbfb{B}x_2                                                                                                                           \\
+    y_2 & = \mathbf{C}h_2 = \mathbf{C}(\mbfb{A}^2\mbfb{B}x_0 + \mbfb{A}\mbfb{B}x_1 + \mbfb{B}x_2)                                                                                               \\
+        & = \mathbf{C}\mbfb{A}^2\mbfb{B}x_0 + \mathbf{C}\mbfb{A}\mbfb{B}x_1 + \mathbf{C}\mbfb{B}x_2                                                                                             \\ \\
+    y_k & = \mathbf{C}\mbfb{A}^k\mbfb{B}x_0 + \mathbf{C}\mbfb{A}^{k-1}\mbfb{B}x_1 + \cdots + \mathbf{C}\mbfb{A}\mbfb{B}x_{k-1} + \mathbf{C}\mbfb{B}x_k \numberthis \label{eq:convolutionalform}
 \end{align*}
 
 Now, the kernel can be constructed from the convolutional form \eqref{eq:convolutionalform} and output $y$ can be computed.
 \begin{align}
-    \mbfb{K} &= (\mathbf{C}\mbfb{B}, \mathbf{C}\mbfb{A}\mbfb{B}, \ldots, \mathbf{C}\mbfb{A}^k\mbfb{B}, \ldots) \\
-    y &= x * \mbfb{K}
+    \mbfb{K} & = (\mathbf{C}\mbfb{B}, \mathbf{C}\mbfb{A}\mbfb{B}, \ldots, \mathbf{C}\mbfb{A}^k\mbfb{B}, \ldots) \\
+    y        & = x * \mbfb{K}
 \end{align}
 This convolution can be computed in parallel as $y_k$ does not depend on previous outputs.
 
@@ -145,7 +145,7 @@ Additionally, for a given input of multiple dimensions, such as what is produced
 For the state space model to perform well, data must be accurately captured about a previous state to produce a new token. The structure of the $\mathbf{A}$ matrix is carefully considered and the HiPPO (Hight-Order Polynomial Projection Operator) framework, presented in \cite{gu2020hippo}, is employed to maintain proper behavior of this matrix. The HiPPO framework is a technique for approximating a representation of the entire input history that makes use of orthogonal polynomial functions. Recent context of the input sequence is captured well and tokens of past information decays exponentially. This provides the proper information to the latent state, $h(t)$, making the technique a powerful tool for modeling long-range dependencies in sequence data.
 
 
-%% This was previosuly here, didn't delete yet
+%% This was previously here, didn't delete yet
 % This system is linear and time-invariant. They key concept is to discretize the continuous system function. he SSM parameter matrices are constant over time, meaning the system is Linear Time-Invariant (LTI), and can be equivalently expressed as a convolution between the input signal and the SSM's impulse response function, $K(t)$. This convolutional form makes LTI SSMs particularly efficient to compute, which is crucial for their application in modern deep learning models \cite{gu2022efficiently}.
 
 % A key concept in the SSM literature is the SSM basis, which is a set of functions defined by the matrix exponential $e^{tA}B$. The output of the SSM is a linear combination of these basis functions, weighted by the coefficients in matrix $C$. The choice of the SSM basis functions determines the properties and capabilities of the SSM \cite{gu2022efficiently}. \gr{idk these equations, check later}
@@ -153,41 +153,56 @@ For the state space model to perform well, data must be accurately captured abou
 % The HiPPO framework proposed a mathematical technique for deriving SSMs with orthogonal basis functions, such that the latent state $x(t)$ maintains a compressed representation of the entire input history. By carefully designing the SSM matrices, HiPPO derived SSMs whose basis functions could reconstruct the input signal history from the latent state, making them powerful tools for modeling long-range dependencies in sequence data \cite{gu2020hippo}. 
 
 % The Mamba model builds on this sequence modeling by extending SSMs with a gating mechanism to enable more general sequence modeling tasks beyond signal reconstruction and memorization \cite{gu2023mamba}. %The success of models like S4 and Mamba have demonstrated the potential of SSMs as a fundamental building block for efficient and expressive sequence models.
-
-
+%%%%%%
 
 
 \section{Mamba}
 Mamba (S6) \cite{gu2023mamba} is a recently proposed foundational architecture that builds on the SSM (S4) architecture. The S6 block combines the modeling power of Transformers with the linear scaling efficiency of SSMs. The key idea is to augment SSMs with a selection mechanism that allows the model parameters to vary based on the input, enabling them to perform content-aware reasoning.
 
-Standard SSMs map an input sequence $x(t)$ to an output $y(t)$ via a latent state $h(t)$ using a linear time-invariant system, shown by equations \ref{eq:SSMlatent} and \ref{eq:SSMoutput}, where the parameter matrices $\mathbf{A}$, $\mathbf{B}$, $\mathbf{C}$, $\mathbf{D}$ are fixed. In the original paper, the $\mathbf{D}$ matrix is considered only as a skip connection, and thus as it does not directly play a role in the differential equation, was ignored. This allows SSMs to be computed efficiently as a convolution. However, the time-invariance means the model cannot change its behavior for specific inputs, making it difficult to solve tasks requiring selective focus, such as selective copying or induction heads \cite{gu2023mamba}.
+Standard SSMs map an input sequence $x(t)$ to an output $y(t)$ via a latent state $h(t)$ using a linear time-invariant system, shown by equations \eqref{eq:SSMlatent} and \eqref{eq:SSMoutput}, where the parameter matrices $\mathbf{A}$, $\mathbf{B}$, $\mathbf{C}$, $\mathbf{D}$ are fixed. This allows SSMs to be computed efficiently as a convolution. However, the time-invariance means the model cannot change its behavior for specific inputs, making it difficult to solve tasks requiring selective focus, such as selective copying or induction heads \cite{gu2023mamba}.
 
-To address these challenges, Mamba introduces a selection mechanism where the SSM parameters $\mathbf{B}$, $\mathbf{C}$, $\Delta$ (the state step size) are time-varying for each input token $x_t$. This allows the model to selectively propagate or forget information based on the current token. The selective SSM is computed using a parallel scan operation to maintain linear complexity.
+To address these challenges, Mamba introduces a selection mechanism where the SSM parameters $\mathbf{B}$, $\mathbf{C}$, $\Delta$ (the state step size) are time-varying for each input token $x_t$. This allows the model to selectively propagate or forget information based on the current token. The selective SSM is computed using a parallel scan operation to maintain linear complexity, Algorithm \ref{selectivescan}.
 
 \newcommand{\algorithmicinput}{\textbf{Input:}}
 \newcommand{\INPUT}{\item[\algorithmicinput]}
 \newcommand{\algorithmicoutput}{\textbf{Output:}}
 \newcommand{\OUTPUT}{\item[\algorithmicoutput]}
 \begin{algorithm}
-\caption{SSM + Selection \em Mamba Block (S6)}
-\label{mambablock}
-\begin{algorithmic}[1]
-    \INPUT x: (B, L, D)
-    \OUTPUT y: (B, L, D)
-    \STATE $\mathbf{A}$: (D, N) $\leftarrow$ Parameter \\
-    {\begin{flushright}$\triangleright$ Represents structured $N \times N$ matrix\end{flushright}}
-    \STATE $\mathbf{B}$: \textcolor{purple}{(B, L, N)} $\leftarrow$ \textcolor{purple}{$S_B(x)$}
-    \STATE $\mathbf{C}$: \textcolor{purple}{(B, L, N)} $\leftarrow$ \textcolor{purple}{$S_C(x)$}
-    \STATE $\mathbf{\Delta}$: \textcolor{purple}{(B, L, N)} $\leftarrow$ $\tau_\Delta$ (Parameter \textcolor{purple}{$+ S_\Delta(x)$})
-    \STATE $\mbfb{A}$, $\mbfb{B}$: \textcolor{purple}{(B, L, D, N)} $\leftarrow$ discretize($\mathbf{\Delta}$, $\mathbf{A}$, $\mathbf{B}$)
-    \STATE $y$ $\leftarrow$ SSM($\mbfb{A}$, $\mbfb{B}$, $\mathbf{C}$)(x) \\
-    {\begin{flushright}$\triangleright$ \textcolor{purple}{Time-varying}: recurrence (\textcolor{purple}{$scan$}) only\end{flushright}}
-    \RETURN $y$
-\end{algorithmic}
+    \caption{SSM + Selection \em Mamba Block (S6)}
+    \label{selectivescan}
+    \begin{algorithmic}[1]
+        \INPUT x: (B, L, D)
+        \OUTPUT y: (B, L, D)
+        \STATE $\mathbf{A}$: (D, N) $\leftarrow$ Parameter \\
+        {\begin{flushright}$\triangleright$ Represents structured $N \times N$ matrix\end{flushright}}
+        \STATE $\mathbf{B}$: \textcolor{purple}{(B, L, N)} $\leftarrow$ \textcolor{purple}{$S_B(x)$}
+        \STATE $\mathbf{C}$: \textcolor{purple}{(B, L, N)} $\leftarrow$ \textcolor{purple}{$S_C(x)$}
+        \STATE $\mathbf{\Delta}$: \textcolor{purple}{(B, L, N)} $\leftarrow$ $\tau_\Delta$ (Parameter \textcolor{purple}{$+ S_\Delta(x)$})
+        \STATE $\mbfb{A}$, $\mbfb{B}$: \textcolor{purple}{(B, L, D, N)} $\leftarrow$ discretize($\mathbf{\Delta}$, $\mathbf{A}$, $\mathbf{B}$)
+        \STATE $y$ $\leftarrow$ SSM($\mbfb{A}$, $\mbfb{B}$, $\mathbf{C}$)(x) \\
+        {\begin{flushright}$\triangleright$ \textcolor{purple}{Time-varying}: recurrence (\textcolor{purple}{$scan$}) only\end{flushright}}
+        \RETURN $y$
+    \end{algorithmic}
 \end{algorithm}
+
+The parallel scan decreases the time complexity from $O(N)$ to $O(N/T)$ by implementing $T$ threads to perform binary operations in parallel, syncronizing at each step. 
+
+A major slow down that comes with having a time-varying system is that every input uses a different kernel. Mamba addresses this by considering the relationships of memory in the hardware of modern GPUs. When an operation on a tensor is performed, the tensor is copied from the High-Bandwidth Memory (HBM), which is slow, of the GPU to the SRAM memory, which is fast, where the operation is performed, then is copied back to the HBM memory. Minimizing the number of times a tensor is copied between the fast and slow memory greatly improves the computation speed and efficiency of a tensor operation. Mamba employs kernel fusion to create a custom CUDA kernel as that multiple tensor operations are computed in SRAM without the need for unnecessary copy operations to and from the HBM, preventing an IO bound process.
+
+To compute the gradient of loss function during back-propagation, the gradient of each node in the network is needed for this computation. The chain rule is used to calculate the these gradient as each node in a forward pass. The results would need to be cached and copied for calculation during back-propagation. Reducing memory requirements of the model, these calculations are recomputed for the loss function, preventing the slow copy operations from the HBM.
+
+
+The Mamba block interleaves the selective SSM with linear projections, convolutions, and activations:
+\begin{enumerate}
+    \item Linear projection to expand the embedding dimension
+    \item Convolution to mix information between dimensions
+    \item Selective SSM via parallel scan to efficiently propagate information
+    \item Linear projection scale back to the target embedding size
+\end{enumerate}
+
 \newcommand{\INDTSTATE}[2][2em]{\STATE \hspace*{#1}#2}
 \begin{algorithm}
-    \caption{S6 Block Pipeline}
+    \caption{Mamba (S6) Block Pipeline}
     \label{s6block}
     \begin{algorithmic}[1]
         \INPUT $x$: (B, L, D)
@@ -202,26 +217,14 @@ To address these challenges, Mamba introduces a selection mechanism where the SS
             \INDTSTATE[2em]{Linear: $b2$:(B, L, D) $\leftarrow$ $r$: (B, L, N)}
             \INDTSTATE[2em]{SiLU: $b2$:(B, L, N) $\leftarrow$ $b2$:(B, L, N)}
         \STATE Element-Wise Multiply: \\$z$:(B, L, N) $\leftarrow$ $b1$:(B, L, N) $\times$ $b2$:(B, L, N)
-        \STATE Linear: $z$:(B, L, D) $\leftarrow$ $z$:(B, L, N) 
+        \STATE Linear: $z$:(B, L, D) $\leftarrow$ $z$:(B, L, N)
         \STATE Add: $z$:(B, L, D) $\leftarrow$ $z$:(B, L, D) $+$ $x$:(B, L, D)
         \STATE $y$ $\leftarrow$ $z$
         \RETURN $y$
     \end{algorithmic}
-    \end{algorithm}
-Multiple of the S6 blocks are stacked to form the Mamba architecture, similarly to how Transformers stack their self-attention blocks.
+\end{algorithm}
 
-%% EDITS STOPPED HERE -- wanting to add more on Mamba (scan operation details, hardware aware computation, kernel fusion, recomputation of loss?)
-
-
-The Mamba block interleaves the selective SSM with linear projections, convolutions, and activations:
-\begin{enumerate}
-\item Linear projection to expand the embedding dimension
-\item Convolution to mix information between dimensions
-\item Selective SSM via parallel scan to efficiently propagate information
-\item Linear projection scale back to the target embedding size
-\end{enumerate}
-
-These blocks are stacked to form the Mamba architecture. Compared to Transformers, Mamba can achieve comparable modeling performance while scaling linearly in sequence length rather than quadratically \cite{gu2023mamba}. Overall, the selective SSM leverages the strengths of RNNs, CNNs and Transformers - it maintains an unbounded context window like RNNs, can be parallelized like CNNs, and achieves content-aware reasoning like Transformers, while being more efficient than all three. This makes Mamba a promising foundation model for processing long sequences across various domains.
+These S6 blocks are stacked to form the Mamba architecture. Compared to Transformers, Mamba can achieve comparable modeling performance while scaling linearly in sequence length rather than quadratically \cite{gu2023mamba}. Overall, the selective SSM leverages the strengths of RNNs, CNNs and Transformers - it maintains an unbounded context window like RNNs, can be parallelized like CNNs, and achieves content-aware reasoning like Transformers, while being more efficient than all three. This makes Mamba a promising foundation model for processing long sequences across various domains.
 
 \section{Application: Image Segmentation}
 Here we investigate Mamba-based architectures with regards to the task of image segmentation.
@@ -310,18 +313,18 @@ The results are shown in Figures \ref{fig:balls} and \ref{fig:segs}.
         \hline
         \textbf{Model Name} & \textbf{Parameter Count (Millions)} & \textbf{Dice Score} \\
         \hline
-        UMambaBot\_PP & 10.0 & 0.8867 \\
-        UMambaBot & 9.8 & 0.8799 \\
-        ResNet18 & 13.9 & 0.8648 \\
-        ResNet50 & 42.9 & 0.8672 \\
-        SegFormer & 17.8 & 0.8454 \\
-        UNet & 7.8 & 0.8929 \\
-        UL-VM-UNet & 0.049 & 0.79955 \\
-        UL-VM-UNet\_v1 & 0.20 & 0.8409 \\
-        UL-VM-UNet\_v2 & 0.042 & 0.8243 \\
-        UL-VM-UNet\_v3 & 0.176 & 0.8109 \\
-        UL-VM-UNet\_v4 & 1.1 & 0.8548 \\
-        UL-VM-UNet\_v5 & 0.7 & 0.8633 \\
+        UMambaBot\_PP       & 10.0                                & 0.8867              \\
+        UMambaBot           & 9.8                                 & 0.8799              \\
+        ResNet18            & 13.9                                & 0.8648              \\
+        ResNet50            & 42.9                                & 0.8672              \\
+        SegFormer           & 17.8                                & 0.8454              \\
+        UNet                & 7.8                                 & 0.8929              \\
+        UL-VM-UNet          & 0.049                               & 0.79955             \\
+        UL-VM-UNet\_v1      & 0.20                                & 0.8409              \\
+        UL-VM-UNet\_v2      & 0.042                               & 0.8243              \\
+        UL-VM-UNet\_v3      & 0.176                               & 0.8109              \\
+        UL-VM-UNet\_v4      & 1.1                                 & 0.8548              \\
+        UL-VM-UNet\_v5      & 0.7                                 & 0.8633              \\
         \hline
     \end{tabular}
     \caption{Comparison of different segmentation models.}
@@ -362,60 +365,60 @@ Our results show that the VIM model achieves competitive performance compared to
 
 
 \begin{thebibliography}{00}
-\bibitem{brown2020language} T. B. Brown et al., "Language Models are Few-Shot Learners," arXiv:2005.14165 [cs.CL], 2020.
-\bibitem{dosovitskiy2021image} A. Dosovitskiy et al., "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale," arXiv:2010.11929 [cs.CV], 2021.
-\bibitem{warden2019tinyml} P. Warden and D. Situnayake, "TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers," O'Reilly Media, Inc., 2019.
-\bibitem{banbury2021benchmarking} C. R. Banbury et al., "MLPerf Tiny Benchmark," arXiv:2106.07597 [cs.LG], 2021.
-\bibitem{ronneberger2015unet} O. Ronneberger, P. Fischer, and T. Brox, "U-Net: Convolutional Networks for Biomedical Image Segmentation," arXiv:1505.04597 [cs.CV], 2015.
-\bibitem{he2016deep} K. He, X. Zhang, S. Ren, and J. Sun, "Deep Residual Learning for Image Recognition," arXiv:1512.03385 [cs.CV], 2016.
-\bibitem{vaswani2017attention} A. Vaswani et al., "Attention Is All You Need," arXiv:1706.03762 [cs.CL], 2017.
-\bibitem{choromanski2020rethinking} K. Choromanski et al., "Rethinking Attention with Performers," arXiv:2009.14794 [cs.LG], 2020.
-\bibitem{gu2022efficiently} A. Gu, K. Goel, and C. Ré, "Efficiently Modeling Long Sequences with Structured State Spaces," arXiv:2111.00396 [cs.LG], 2022.
-\bibitem{gu2023mamba} A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with Selective State Spaces," arXiv:2312.00752 [cs.LG], 2023.
-\bibitem{krizhevsky2012imagenet} - ImageNet Classification with Deep Convolutional Neural Networks
-\bibitem{simonyan2014very} - Very Deep Convolutional Networks for Large-Scale Image Recognition
-\bibitem{szegedy2015going} - Going Deeper with Convolutions
-\bibitem{he2016deep} - Deep Residual Learning for Image Recognition
-\bibitem{howard2017mobilenets} - MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications
-\bibitem{tan2019efficientnet} - EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
-\bibitem{radosavovic2020designing} - Designing Network Design Spaces
-\bibitem{xie2021segformer} - SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers
-\bibitem{choromanski2020rethinking} - Rethinking Attention with Performers
-\bibitem{cheng2017survey} - A Survey of Model Compression and Acceleration for Deep Neural Networks
-\bibitem{hinton2015distilling} - Distilling the Knowledge in a Neural Network
-\bibitem{gu2022efficiently} A. Gu, K. Goel, and C. Ré, "Efficiently Modeling Long Sequences with Structured State Spaces," arXiv preprint arXiv:2111.00396, 2022.
-\bibitem{gu2020hippo} A. Gu, T. Dao, S. Ermon, A. Rudra, and C. Ré, "HiPPO: Recurrent Memory with Optimal Polynomial Projections," Advances in Neural Information Processing Systems, vol. 33, pp. 1474-1487, 2020.
-\bibitem{gu2023mamba} A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with State Spaces," arXiv preprint arXiv:2302.01327, 2023.
+    \bibitem{brown2020language} T. B. Brown et al., "Language Models are Few-Shot Learners," arXiv:2005.14165 [cs.CL], 2020.
+    \bibitem{dosovitskiy2021image} A. Dosovitskiy et al., "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale," arXiv:2010.11929 [cs.CV], 2021.
+    \bibitem{warden2019tinyml} P. Warden and D. Situnayake, "TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers," O'Reilly Media, Inc., 2019.
+    \bibitem{banbury2021benchmarking} C. R. Banbury et al., "MLPerf Tiny Benchmark," arXiv:2106.07597 [cs.LG], 2021.
+    \bibitem{ronneberger2015unet} O. Ronneberger, P. Fischer, and T. Brox, "U-Net: Convolutional Networks for Biomedical Image Segmentation," arXiv:1505.04597 [cs.CV], 2015.
+    \bibitem{he2016deep} K. He, X. Zhang, S. Ren, and J. Sun, "Deep Residual Learning for Image Recognition," arXiv:1512.03385 [cs.CV], 2016.
+    \bibitem{vaswani2017attention} A. Vaswani et al., "Attention Is All You Need," arXiv:1706.03762 [cs.CL], 2017.
+    \bibitem{choromanski2020rethinking} K. Choromanski et al., "Rethinking Attention with Performers," arXiv:2009.14794 [cs.LG], 2020.
+    \bibitem{gu2022efficiently} A. Gu, K. Goel, and C. Ré, "Efficiently Modeling Long Sequences with Structured State Spaces," arXiv:2111.00396 [cs.LG], 2022.
+    \bibitem{gu2023mamba} A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with Selective State Spaces," arXiv:2312.00752 [cs.LG], 2023.
+    \bibitem{krizhevsky2012imagenet} - ImageNet Classification with Deep Convolutional Neural Networks
+    \bibitem{simonyan2014very} - Very Deep Convolutional Networks for Large-Scale Image Recognition
+    \bibitem{szegedy2015going} - Going Deeper with Convolutions
+    \bibitem{he2016deep} - Deep Residual Learning for Image Recognition
+    \bibitem{howard2017mobilenets} - MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications
+    \bibitem{tan2019efficientnet} - EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
+    \bibitem{radosavovic2020designing} - Designing Network Design Spaces
+    \bibitem{xie2021segformer} - SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers
+    \bibitem{choromanski2020rethinking} - Rethinking Attention with Performers
+    \bibitem{cheng2017survey} - A Survey of Model Compression and Acceleration for Deep Neural Networks
+    \bibitem{hinton2015distilling} - Distilling the Knowledge in a Neural Network
+    \bibitem{gu2022efficiently} A. Gu, K. Goel, and C. Ré, "Efficiently Modeling Long Sequences with Structured State Spaces," arXiv preprint arXiv:2111.00396, 2022.
+    \bibitem{gu2020hippo} A. Gu, T. Dao, S. Ermon, A. Rudra, and C. Ré, "HiPPO: Recurrent Memory with Optimal Polynomial Projections," Advances in Neural Information Processing Systems, vol. 33, pp. 1474-1487, 2020.
+    \bibitem{gu2023mamba} A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with State Spaces," arXiv preprint arXiv:2302.01327, 2023.
 
-\bibitem{vaswani2023attention} A. Vaswani et al., "Attention Is All You Need," arXiv:1706.03762 [cs.CL], 2023.
+    \bibitem{vaswani2023attention} A. Vaswani et al., "Attention Is All You Need," arXiv:1706.03762 [cs.CL], 2023.
 
-\bibitem{gu2022efficiently} A. Gu, K. Goel, and C. Ré, "Efficiently Modeling Long Sequences with Structured State Spaces," arXiv:2111.00396 [cs.LG], 2022.
+    \bibitem{gu2022efficiently} A. Gu, K. Goel, and C. Ré, "Efficiently Modeling Long Sequences with Structured State Spaces," arXiv:2111.00396 [cs.LG], 2022.
 
-\bibitem{gu2023mamba} A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with Selective State Spaces," arXiv:2312.00752 [cs.LG], 2023.
+    \bibitem{gu2023mamba} A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with Selective State Spaces," arXiv:2312.00752 [cs.LG], 2023.
 
-\bibitem{bakas2019identifying} S. Bakas et al., "Identifying the Best Machine Learning Algorithms for Brain Tumor Segmentation, Progression Assessment, and Overall Survival Prediction in the BRATS Challenge," arXiv:1811.02629 [cs.CV], 2019.
+    \bibitem{bakas2019identifying} S. Bakas et al., "Identifying the Best Machine Learning Algorithms for Brain Tumor Segmentation, Progression Assessment, and Overall Survival Prediction in the BRATS Challenge," arXiv:1811.02629 [cs.CV], 2019.
 
-\bibitem{U-Mamba} J. Ma, F. Li, and B. Wang, "U-Mamba: Enhancing Long-range Dependency for Biomedical Image Segmentation," arXiv:2401.04722 [cs.CV], 2024.
+    \bibitem{U-Mamba} J. Ma, F. Li, and B. Wang, "U-Mamba: Enhancing Long-range Dependency for Biomedical Image Segmentation," arXiv:2401.04722 [cs.CV], 2024.
 
-\bibitem{rombach2021highresolution} R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, "High-Resolution Image Synthesis with Latent Diffusion Models," arXiv:2112.10752 [cs.CV], 2021.
+    \bibitem{rombach2021highresolution} R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, "High-Resolution Image Synthesis with Latent Diffusion Models," arXiv:2112.10752 [cs.CV], 2021.
 
-\bibitem{DBLP:journals/corr/abs-2006-11239} J. Ho, A. Jain, and P. Abbeel, "Denoising Diffusion Probabilistic Models," CoRR, vol. abs/2006.11239, 2020. [Online]. Available: https://arxiv.org/abs/2006.11239
+    \bibitem{DBLP:journals/corr/abs-2006-11239} J. Ho, A. Jain, and P. Abbeel, "Denoising Diffusion Probabilistic Models," CoRR, vol. abs/2006.11239, 2020. [Online]. Available: https://arxiv.org/abs/2006.11239
 
-\bibitem{DBLP:journals/corr/HeZRS15} K. He, X. Zhang, S. Ren, and J. Sun, "Deep Residual Learning for Image Recognition," CoRR, vol. abs/1512.03385, 2015. [Online]. Available: http://arxiv.org/abs/1512.03385
+    \bibitem{DBLP:journals/corr/HeZRS15} K. He, X. Zhang, S. Ren, and J. Sun, "Deep Residual Learning for Image Recognition," CoRR, vol. abs/1512.03385, 2015. [Online]. Available: http://arxiv.org/abs/1512.03385
 
-\bibitem{zhang2022segvit} B. Zhang et al., "SegViT: Semantic Segmentation with Plain Vision Transformers," arXiv:2210.05844 [cs.CV], 2022.
+    \bibitem{zhang2022segvit} B. Zhang et al., "SegViT: Semantic Segmentation with Plain Vision Transformers," arXiv:2210.05844 [cs.CV], 2022.
 
-\bibitem{ultralightvmunet} R. Wu, Y. Liu, P. Liang, and Q. Chang, “UltraLight VM-UNet: Parallel Vision Mamba Significantly Reduces Parameters for Skin Lesion Segmentation.” Accessed: Apr. 20, 2024. [Online]. Available: https://arxiv.org/pdf/2403.20035.pdf
-\bibitem{zhao2017pyramid}
-H. Zhao, J. Shi, X. Qi, X. Wang and J. Jia, "Pyramid Scene Parsing Network," 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017, pp. 6230-6239, doi: 10.1109/CVPR.2017.660.
-\bibitem{dataset} “Brain MRI segmentation,” www.kaggle.com. https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
-\bibitem{xie2021segformer} E. Xie, W. Wang, Z. Yu, A. Anandkumar, J. Alvarez, and P. Luo, “SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers.” Available: https://arxiv.org/pdf/2105.15203.pdf
-\bibitem{krizhevsky2009learning} A. Krizhevsky, "Learning Multiple Layers of Features from Tiny Images," Tech Report, 2009.
-\bibitem{gu2023mamba} A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with Selective State Spaces," arXiv:2312.00752 [cs.LG], 2023.
-\bibitem{he2016deep} K. He, X. Zhang, S. Ren, and J. Sun, "Deep Residual Learning for Image Recognition," arXiv:1512.03385 [cs.CV], 2016.
-\bibitem{xie2017aggregated} S. Xie, R. Girshick, P. Dollár, Z. Tu, and K. He, "Aggregated Residual Transformations for Deep Neural Networks," arXiv:1611.05431 [cs.CV], 2017.
-\bibitem{krizhevsky2012imagenet} A. Krizhevsky, I. Sutskever, and G. E. Hinton, "ImageNet Classification with Deep Convolutional Neural Networks," Advances in Neural Information Processing Systems, vol. 25, 2012.
-\bibitem{sutskever2013importance} I. Sutskever, J. Martens, G. Dahl, and G. Hinton, "On the Importance of Initialization and Momentum in Deep Learning," Proceedings of the 30th International Conference on Machine Learning, vol. 28, pp. 1139-1147, 2013.
+    \bibitem{ultralightvmunet} R. Wu, Y. Liu, P. Liang, and Q. Chang, “UltraLight VM-UNet: Parallel Vision Mamba Significantly Reduces Parameters for Skin Lesion Segmentation.” Accessed: Apr. 20, 2024. [Online]. Available: https://arxiv.org/pdf/2403.20035.pdf
+    \bibitem{zhao2017pyramid}
+    H. Zhao, J. Shi, X. Qi, X. Wang and J. Jia, "Pyramid Scene Parsing Network," 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017, pp. 6230-6239, doi: 10.1109/CVPR.2017.660.
+    \bibitem{dataset} “Brain MRI segmentation,” www.kaggle.com. https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
+    \bibitem{xie2021segformer} E. Xie, W. Wang, Z. Yu, A. Anandkumar, J. Alvarez, and P. Luo, “SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers.” Available: https://arxiv.org/pdf/2105.15203.pdf
+    \bibitem{krizhevsky2009learning} A. Krizhevsky, "Learning Multiple Layers of Features from Tiny Images," Tech Report, 2009.
+    \bibitem{gu2023mamba} A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with Selective State Spaces," arXiv:2312.00752 [cs.LG], 2023.
+    \bibitem{he2016deep} K. He, X. Zhang, S. Ren, and J. Sun, "Deep Residual Learning for Image Recognition," arXiv:1512.03385 [cs.CV], 2016.
+    \bibitem{xie2017aggregated} S. Xie, R. Girshick, P. Dollár, Z. Tu, and K. He, "Aggregated Residual Transformations for Deep Neural Networks," arXiv:1611.05431 [cs.CV], 2017.
+    \bibitem{krizhevsky2012imagenet} A. Krizhevsky, I. Sutskever, and G. E. Hinton, "ImageNet Classification with Deep Convolutional Neural Networks," Advances in Neural Information Processing Systems, vol. 25, 2012.
+    \bibitem{sutskever2013importance} I. Sutskever, J. Martens, G. Dahl, and G. Hinton, "On the Importance of Initialization and Momentum in Deep Learning," Proceedings of the 30th International Conference on Machine Learning, vol. 28, pp. 1139-1147, 2013.
 \end{thebibliography}
 
 \end{document}
