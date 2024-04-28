@@ -1,24 +1,8 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
-\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
-\global\let\oldcontentsline\contentsline
-\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
-\global\let\oldnewlabel\newlabel
-\gdef\newlabel#1#2{\newlabelxx{#1}#2}
-\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
-\AtEndDocument{\ifx\hyper@anchor\@undefined
-\let\contentsline\oldcontentsline
-\let\newlabel\oldnewlabel
-\fi}
-\fi}
-\global\let\hyper@last\relax 
-\gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{brown2020language,dosovitskiy2021image}
-\citation{warden2019tinyml}
-\citation{banbury2021benchmarking}
 \citation{dosovitskiy2021image}
 \citation{ronneberger2015unet}
 \citation{he2016deep}
@@ -26,10 +10,12 @@
 \citation{choromanski2020rethinking}
 \citation{gu2022efficiently}
 \citation{gu2023mamba}
+\citation{lecundocument}
 \citation{krizhevsky2012imagenet}
 \citation{simonyan2014very}
 \citation{szegedy2015going}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Current Vision Task SOTA}{1}{section.2}\protected@file@percent }
 \citation{he2016deep}
 \citation{howard2017mobilenets}
 \citation{tan2019efficientnet}
@@ -40,17 +26,16 @@
 \citation{cheng2017survey,hinton2015distilling}
 \citation{gu2022efficiently}
 \citation{gu2023mamba}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Current Vision Task SOTA}{2}{section.2}\protected@file@percent }
+\citation{gu2022efficiently}
 \@writefile{toc}{\contentsline {section}{\numberline {III}State Space Models (SSMs)}{2}{section.3}\protected@file@percent }
 \newlabel{eq:SSMlatent}{{1}{2}{State Space Models (SSMs)}{equation.3.1}{}}
 \newlabel{eq:SSMoutput}{{2}{2}{State Space Models (SSMs)}{equation.3.2}{}}
 \newlabel{eq:recurrentform}{{{4}}{2}{State Space Models (SSMs)}{AMS.2}{}}
-\citation{gu2022efficiently}
+\newlabel{eq:discretelatent}{{5}{2}{State Space Models (SSMs)}{equation.3.5}{}}
+\newlabel{eq:discreteoutput}{{6}{2}{State Space Models (SSMs)}{equation.3.6}{}}
 \citation{gu2020hippo}
 \citation{gu2023mamba}
 \citation{gu2023mamba}
-\newlabel{eq:discretelatent}{{5}{3}{State Space Models (SSMs)}{equation.3.5}{}}
-\newlabel{eq:discreteoutput}{{6}{3}{State Space Models (SSMs)}{equation.3.6}{}}
 \newlabel{eq:convolutionalform}{{{7}}{3}{State Space Models (SSMs)}{AMS.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Mamba}{3}{section.4}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces SSM + Selection \em  Mamba Block (S6)}}{3}{algorithm.1}\protected@file@percent }
@@ -65,6 +50,7 @@
 \citation{ronneberger2015unet}
 \citation{DBLP:journals/corr/abs-2006-11239}
 \citation{rombach2021highresolution}
+\citation{DBLP:journals/corr/HeZRS15}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Mamba (S6) Block Pipeline}}{4}{algorithm.2}\protected@file@percent }
 \newlabel{s6block}{{2}{4}{Mamba}{algorithm.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Application: Image Segmentation}{4}{section.5}\protected@file@percent }
@@ -74,87 +60,91 @@
 \newlabel{sec3}{{VII}{4}{Output Data}{section.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {VIII}Compared Models}{4}{section.8}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-A}}U-Net}{4}{subsection.8.1}\protected@file@percent }
-\citation{DBLP:journals/corr/HeZRS15}
 \citation{U-Mamba}
 \citation{gu2022efficiently}
 \citation{xie2021segformer}
+\citation{ultralightvmunet}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Distributions of tumor and non-tumor images in the train, validation, and test datasets.}}{5}{figure.1}\protected@file@percent }
 \newlabel{fig:datastats}{{1}{5}{Distributions of tumor and non-tumor images in the train, validation, and test datasets}{figure.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-B}}ResNet}{5}{subsection.8.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-C}}U-Mamba}{5}{subsection.8.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-D}}SegFormer}{5}{subsection.8.4}\protected@file@percent }
-\citation{ultralightvmunet}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-E}}UltraLight VM-UNet}{5}{subsection.8.5}\protected@file@percent }
 \citation{U-Mamba}
 \citation{ultralightvmunet}
 \citation{zhao2017pyramid}
-\citation{ultralightvmunet}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-E}}UltraLight VM-UNet}{6}{subsection.8.5}\protected@file@percent }
+\citation{wu2024ultralight}
 \@writefile{toc}{\contentsline {section}{\numberline {IX}Our Models}{6}{section.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-A}}UMambaBot\_PPBot}{6}{subsection.9.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-B}}UL-VM-UNet\_v1}{6}{subsection.9.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-C}}UL-VM-UNet\_v2}{6}{subsection.9.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-D}}UL-VM-UNet\_v3}{6}{subsection.9.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-E}}UL-VM-UNet\_v4}{6}{subsection.9.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-F}}UL-VM-UNet\_v5}{6}{subsection.9.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-A}}UMambaBot-PP}{6}{subsection.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-B}}UL-VM-UNet-v1}{6}{subsection.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-C}}UL-VM-UNet-v2}{6}{subsection.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-D}}UL-VM-UNet-v3}{6}{subsection.9.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-E}}UL-VM-UNet-v4}{6}{subsection.9.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-F}}UL-VM-UNet-v5}{6}{subsection.9.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-G}}UL-VM-UNet-v6}{6}{subsection.9.7}\protected@file@percent }
 \citation{krizhevsky2009learning}
-\citation{krizhevsky2009learning}
-\citation{gu2023mamba}
-\citation{he2016deep}
-\citation{he2016deep,xie2017aggregated}
-\citation{krizhevsky2012imagenet}
-\citation{sutskever2013importance}
-\bibcite{brown2020language}{1}
-\bibcite{dosovitskiy2021image}{2}
-\bibcite{warden2019tinyml}{3}
-\bibcite{banbury2021benchmarking}{4}
+\citation{zhu2024vision}
+\citation{dosovitskiy2021image}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A scatter plot of Dice Score vs model parameter count, where "M" means "millions. The points are scaled to help represent size.}}{7}{figure.2}\protected@file@percent }
 \newlabel{fig:balls}{{2}{7}{A scatter plot of Dice Score vs model parameter count, where "M" means "millions. The points are scaled to help represent size}{figure.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {X}Results}{7}{section.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {XI}Results}{7}{section.11}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Comparison of different segmentation models.}}{7}{table.1}\protected@file@percent }
 \newlabel{tab:model_comparison}{{I}{7}{Comparison of different segmentation models}{table.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {XI}Application: Image Classification}{7}{section.11}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Example segmentations.}}{7}{figure.3}\protected@file@percent }
 \newlabel{fig:segs}{{3}{7}{Example segmentations}{figure.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {XII}Conclusion}{7}{section.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{7}{section*.5}\protected@file@percent }
-\bibcite{ronneberger2015unet}{5}
-\bibcite{he2016deep}{6}
-\bibcite{vaswani2017attention}{7}
-\bibcite{choromanski2020rethinking}{8}
-\bibcite{gu2022efficiently}{9}
-\bibcite{gu2023mamba}{10}
-\bibcite{krizhevsky2012imagenet}{11}
-\bibcite{simonyan2014very}{12}
-\bibcite{szegedy2015going}{13}
-\bibcite{he2016deep}{14}
-\bibcite{howard2017mobilenets}{15}
-\bibcite{tan2019efficientnet}{16}
-\bibcite{radosavovic2020designing}{17}
-\bibcite{xie2021segformer}{18}
-\bibcite{choromanski2020rethinking}{19}
-\bibcite{cheng2017survey}{20}
-\bibcite{hinton2015distilling}{21}
-\bibcite{gu2022efficiently}{22}
-\bibcite{gu2020hippo}{23}
-\bibcite{gu2023mamba}{24}
-\bibcite{vaswani2023attention}{25}
-\bibcite{gu2022efficiently}{26}
-\bibcite{gu2023mamba}{27}
-\bibcite{bakas2019identifying}{28}
-\bibcite{U-Mamba}{29}
-\bibcite{rombach2021highresolution}{30}
-\bibcite{DBLP:journals/corr/abs-2006-11239}{31}
-\bibcite{DBLP:journals/corr/HeZRS15}{32}
-\bibcite{zhang2022segvit}{33}
-\bibcite{ultralightvmunet}{34}
-\bibcite{zhao2017pyramid}{35}
-\bibcite{dataset}{36}
-\bibcite{xie2021segformer}{37}
-\bibcite{krizhevsky2009learning}{38}
-\bibcite{gu2023mamba}{39}
-\bibcite{he2016deep}{40}
-\bibcite{xie2017aggregated}{41}
-\bibcite{krizhevsky2012imagenet}{42}
-\bibcite{sutskever2013importance}{43}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Example images from CIFAR100.}}{8}{figure.4}\protected@file@percent }
-\newlabel{fig:segs}{{4}{8}{Example images from CIFAR100}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Example images from CIFAR100.}}{7}{figure.4}\protected@file@percent }
+\newlabel{fig:cifar}{{4}{7}{Example images from CIFAR100}{figure.4}{}}
+\bibcite{brown2020language}{1}
+\bibcite{dosovitskiy2021image}{2}
+\bibcite{banbury2021benchmarking}{3}
+\bibcite{ronneberger2015unet}{4}
+\bibcite{he2016deep}{5}
+\bibcite{vaswani2017attention}{6}
+\bibcite{choromanski2020rethinking}{7}
+\bibcite{gu2022efficiently}{8}
+\bibcite{gu2023mamba}{9}
+\bibcite{krizhevsky2012imagenet}{10}
+\bibcite{simonyan2014very}{11}
+\bibcite{szegedy2015going}{12}
+\bibcite{he2016deep}{13}
+\bibcite{howard2017mobilenets}{14}
+\bibcite{tan2019efficientnet}{15}
+\bibcite{radosavovic2020designing}{16}
+\bibcite{xie2021segformer}{17}
+\bibcite{choromanski2020rethinking}{18}
+\bibcite{cheng2017survey}{19}
+\bibcite{hinton2015distilling}{20}
+\bibcite{gu2022efficiently}{21}
+\bibcite{gu2020hippo}{22}
+\bibcite{gu2023mamba}{23}
+\bibcite{vaswani2023attention}{24}
+\bibcite{gu2022efficiently}{25}
+\bibcite{gu2023mamba}{26}
+\bibcite{bakas2019identifying}{27}
+\bibcite{U-Mamba}{28}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces F1 scores for ViM and ViT over 100 epochs.}}{8}{figure.5}\protected@file@percent }
+\newlabel{fig:ViMViTF1}{{5}{8}{F1 scores for ViM and ViT over 100 epochs}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Loss scores for ViM and ViT over 100 epochs.}}{8}{figure.6}\protected@file@percent }
+\newlabel{fig:ViMViTLoss}{{6}{8}{Loss scores for ViM and ViT over 100 epochs}{figure.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {XII}Conclusion}{8}{section.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{8}{section*.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Training and validation time for ViT and ViM.}}{8}{figure.7}\protected@file@percent }
+\newlabel{fig:ViMViTTrainingValidationTime}{{7}{8}{Training and validation time for ViT and ViM}{figure.7}{}}
+\bibcite{rombach2021highresolution}{29}
+\bibcite{DBLP:journals/corr/abs-2006-11239}{30}
+\bibcite{DBLP:journals/corr/HeZRS15}{31}
+\bibcite{zhang2022segvit}{32}
+\bibcite{ultralightvmunet}{33}
+\bibcite{zhao2017pyramid}{34}
+\bibcite{dataset}{35}
+\bibcite{xie2021segformer}{36}
+\bibcite{krizhevsky2009learning}{37}
+\bibcite{gu2023mamba}{38}
+\bibcite{he2016deep}{39}
+\bibcite{xie2017aggregated}{40}
+\bibcite{krizhevsky2012imagenet}{41}
+\bibcite{sutskever2013importance}{42}
+\bibcite{lecundocument}{43}
+\bibcite{zhu2024vision}{44}
+\gdef \@abspage@last{9}

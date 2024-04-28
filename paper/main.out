@@ -1,24 +1,25 @@
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Current Vision Task SOTA}{}% 2
-\BOOKMARK [1][-]{section.3}{State Space Models \(SSMs\)}{}% 3
-\BOOKMARK [1][-]{section.4}{Mamba}{}% 4
-\BOOKMARK [1][-]{section.5}{Application: Image Segmentation}{}% 5
-\BOOKMARK [1][-]{section.6}{Input Data}{}% 6
-\BOOKMARK [1][-]{section.7}{Output Data}{}% 7
-\BOOKMARK [1][-]{section.8}{Compared Models}{}% 8
-\BOOKMARK [2][-]{subsection.8.1}{U-Net}{section.8}% 9
-\BOOKMARK [2][-]{subsection.8.2}{ResNet}{section.8}% 10
-\BOOKMARK [2][-]{subsection.8.3}{U-Mamba}{section.8}% 11
-\BOOKMARK [2][-]{subsection.8.4}{SegFormer}{section.8}% 12
-\BOOKMARK [2][-]{subsection.8.5}{UltraLight VM-UNet}{section.8}% 13
-\BOOKMARK [1][-]{section.9}{Our Models}{}% 14
-\BOOKMARK [2][-]{subsection.9.1}{UMambaBot\137PPBot}{section.9}% 15
-\BOOKMARK [2][-]{subsection.9.2}{UL-VM-UNet\137v1}{section.9}% 16
-\BOOKMARK [2][-]{subsection.9.3}{UL-VM-UNet\137v2}{section.9}% 17
-\BOOKMARK [2][-]{subsection.9.4}{UL-VM-UNet\137v3}{section.9}% 18
-\BOOKMARK [2][-]{subsection.9.5}{UL-VM-UNet\137v4}{section.9}% 19
-\BOOKMARK [2][-]{subsection.9.6}{UL-VM-UNet\137v5}{section.9}% 20
-\BOOKMARK [1][-]{section.10}{Results}{}% 21
-\BOOKMARK [1][-]{section.11}{Application: Image Classification}{}% 22
-\BOOKMARK [1][-]{section.12}{Conclusion}{}% 23
-\BOOKMARK [1][-]{section*.5}{References}{}% 24
+\BOOKMARK [1][-]{section.1}{\376\377\000I\000n\000t\000r\000o\000d\000u\000c\000t\000i\000o\000n}{}% 1
+\BOOKMARK [1][-]{section.2}{\376\377\000C\000u\000r\000r\000e\000n\000t\000\040\000V\000i\000s\000i\000o\000n\000\040\000T\000a\000s\000k\000\040\000S\000O\000T\000A}{}% 2
+\BOOKMARK [1][-]{section.3}{\376\377\000S\000t\000a\000t\000e\000\040\000S\000p\000a\000c\000e\000\040\000M\000o\000d\000e\000l\000s\000\040\000\050\000S\000S\000M\000s\000\051}{}% 3
+\BOOKMARK [1][-]{section.4}{\376\377\000M\000a\000m\000b\000a}{}% 4
+\BOOKMARK [1][-]{section.5}{\376\377\000A\000p\000p\000l\000i\000c\000a\000t\000i\000o\000n\000:\000\040\000I\000m\000a\000g\000e\000\040\000S\000e\000g\000m\000e\000n\000t\000a\000t\000i\000o\000n}{}% 5
+\BOOKMARK [1][-]{section.6}{\376\377\000I\000n\000p\000u\000t\000\040\000D\000a\000t\000a}{}% 6
+\BOOKMARK [1][-]{section.7}{\376\377\000O\000u\000t\000p\000u\000t\000\040\000D\000a\000t\000a}{}% 7
+\BOOKMARK [1][-]{section.8}{\376\377\000C\000o\000m\000p\000a\000r\000e\000d\000\040\000M\000o\000d\000e\000l\000s}{}% 8
+\BOOKMARK [2][-]{subsection.8.1}{\376\377\000U\000-\000N\000e\000t}{section.8}% 9
+\BOOKMARK [2][-]{subsection.8.2}{\376\377\000R\000e\000s\000N\000e\000t}{section.8}% 10
+\BOOKMARK [2][-]{subsection.8.3}{\376\377\000U\000-\000M\000a\000m\000b\000a}{section.8}% 11
+\BOOKMARK [2][-]{subsection.8.4}{\376\377\000S\000e\000g\000F\000o\000r\000m\000e\000r}{section.8}% 12
+\BOOKMARK [2][-]{subsection.8.5}{\376\377\000U\000l\000t\000r\000a\000L\000i\000g\000h\000t\000\040\000V\000M\000-\000U\000N\000e\000t}{section.8}% 13
+\BOOKMARK [1][-]{section.9}{\376\377\000O\000u\000r\000\040\000M\000o\000d\000e\000l\000s}{}% 14
+\BOOKMARK [2][-]{subsection.9.1}{\376\377\000U\000M\000a\000m\000b\000a\000B\000o\000t\000-\000P\000P}{section.9}% 15
+\BOOKMARK [2][-]{subsection.9.2}{\376\377\000U\000L\000-\000V\000M\000-\000U\000N\000e\000t\000-\000v\0001}{section.9}% 16
+\BOOKMARK [2][-]{subsection.9.3}{\376\377\000U\000L\000-\000V\000M\000-\000U\000N\000e\000t\000-\000v\0002}{section.9}% 17
+\BOOKMARK [2][-]{subsection.9.4}{\376\377\000U\000L\000-\000V\000M\000-\000U\000N\000e\000t\000-\000v\0003}{section.9}% 18
+\BOOKMARK [2][-]{subsection.9.5}{\376\377\000U\000L\000-\000V\000M\000-\000U\000N\000e\000t\000-\000v\0004}{section.9}% 19
+\BOOKMARK [2][-]{subsection.9.6}{\376\377\000U\000L\000-\000V\000M\000-\000U\000N\000e\000t\000-\000v\0005}{section.9}% 20
+\BOOKMARK [2][-]{subsection.9.7}{\376\377\000U\000L\000-\000V\000M\000-\000U\000N\000e\000t\000-\000v\0006}{section.9}% 21
+\BOOKMARK [1][-]{section.10}{\376\377\000R\000e\000s\000u\000l\000t\000s}{}% 22
+\BOOKMARK [1][-]{section.11}{\376\377\000R\000e\000s\000u\000l\000t\000s}{}% 23
+\BOOKMARK [1][-]{section.12}{\376\377\000C\000o\000n\000c\000l\000u\000s\000i\000o\000n}{}% 24
+\BOOKMARK [1][-]{section*.5}{\376\377\000R\000e\000f\000e\000r\000e\000n\000c\000e\000s}{}% 25
