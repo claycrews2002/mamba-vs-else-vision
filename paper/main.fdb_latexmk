@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1714323815.59801 "/home/lex/Desktop/d/personal/school/grad/mamba-vs-else-vision/paper/main.tex" "main.pdf" "main" 1714323816.52983 0
+["pdflatex"] 1714324020.62266 "/home/lex/Desktop/d/personal/school/grad/mamba-vs-else-vision/paper/main.tex" "main.pdf" "main" 1714324021.51808 0
   "/home/lex/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map" 1711981755.20458 28192 c58f621899f60e04e256426bc00c5852 ""
   "/home/lex/.miktex/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1711634391.87013 21110824 d49ad83a1dc11d68517ebbde01d9bfdf ""
   "/home/lex/.miktex/texmfs/install/fonts/enc/dvips/base/8r.enc" 1711457623.22374 4993 1194fb36dfcb11d9ae9802f2b00b60a3 ""
@@ -110,7 +110,7 @@
   "/home/lex/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1711459773.15587 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "/home/lex/.miktex/texmfs/install/tex/latex/url/url.sty" 1711459768.23584 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/home/lex/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty" 1711457615.31169 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "/home/lex/Desktop/d/personal/school/grad/mamba-vs-else-vision/paper/main.tex" 1714323811.601 50913 98f5f701dea0ee3c2bf2cc611f9b918c ""
+  "/home/lex/Desktop/d/personal/school/grad/mamba-vs-else-vision/paper/main.tex" 1714324017.43056 50913 4ffa7ca76d4fb90599d3a1ddca111d8a ""
   "imgs/balls.png" 1714319657.28814 52508 b880f18c0856f6b48a8e39ec8b07b69a ""
   "imgs/cifar_10.jpg" 1714319681.29618 178023 472dd4e7c5b17a8bd6ae9904cf23643e ""
   "imgs/data_stats.png" 1714319657.28814 52795 c98e5756719d3f8c9236800ad47a8459 ""
@@ -118,9 +118,9 @@
   "imgs/loss_comparison.png" 1714323344.19722 44216 8c4d2c54a4d594a152075d2779620b30 ""
   "imgs/masks.png" 1714319657.29614 423116 f14cba0e4db28a38bd6eec0c8585f882 ""
   "imgs/time_comparison.png" 1714323344.19722 19111 5eb1ff8c1c834830cec795fefb550351 ""
-  "main.aux" 1714323816.41304 9106 d78be6cd9d3fcc7a0bb872097fca01e4 "pdflatex"
-  "main.out" 1714323816.41304 2868 68b99df60ccb7baa49ac0e401fcc2d17 "pdflatex"
-  "main.tex" 1714323811.601 50913 98f5f701dea0ee3c2bf2cc611f9b918c ""
+  "main.aux" 1714324021.40259 9106 597faf83cfd5709e3c5241f4a536799d "pdflatex"
+  "main.out" 1714324021.40259 2868 68b99df60ccb7baa49ac0e401fcc2d17 "pdflatex"
+  "main.tex" 1714324017.43056 50913 4ffa7ca76d4fb90599d3a1ddca111d8a ""
   (generated)
   "main.aux"
   "main.log"
