@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1714481596 "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.tex" "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.pdf" "main" 1714481597
+["pdflatex"] 1714481695 "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.tex" "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.pdf" "main" 1714481696
   "/etc/texmf/web2c/texmf.cnf" 1710362946 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.aux" 1714481597 10322 9e8ff6adbf5f3bea1c1e452953d25698 ""
-  "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.tex" 1714481594 49801 8f905d0f181e77f9f90bd88b7bcc583e ""
+  "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.aux" 1714481696 10189 269e8220972fc52a4df24b342433fb66 ""
+  "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.tex" 1714481693 49777 0436c7b4949896847655f91c15343f66 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -122,13 +122,13 @@
   "imgs/loss_comparison.png" 1714480284 53772 82b9604d3b23ea85b15558ca2524d4c3 ""
   "imgs/masks.png" 1714132054 423116 f14cba0e4db28a38bd6eec0c8585f882 ""
   "imgs/time_comparison.png" 1714480284 27572 e58dd1808084ddcf0fdd543c12d17416 ""
-  "main.aux" 1714481597 10322 9e8ff6adbf5f3bea1c1e452953d25698 "pdflatex"
-  "main.out" 1714481597 1703 a1ba2ab5bf56dafcfa50278d89319926 "pdflatex"
-  "main.tex" 1714481594 49801 8f905d0f181e77f9f90bd88b7bcc583e ""
+  "main.aux" 1714481696 10189 269e8220972fc52a4df24b342433fb66 "pdflatex"
+  "main.out" 1714481696 1703 a1ba2ab5bf56dafcfa50278d89319926 "pdflatex"
+  "main.tex" 1714481693 49777 0436c7b4949896847655f91c15343f66 ""
   (generated)
+  "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.pdf"
+  "main.aux"
   "main.out"
   "main.log"
-  "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.pdf"
-  "main.pdf"
-  "main.aux"
   "/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.log"
+  "main.pdf"
