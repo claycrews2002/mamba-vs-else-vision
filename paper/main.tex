@@ -225,26 +225,8 @@ The Mamba block interleaves the selective SSM with linear projections, convoluti
 
 These S6 blocks are stacked to form the Mamba architecture. Compared to Transformers, Mamba can achieve comparable modeling performance while scaling linearly in sequence length rather than quadratically \cite{gu2023mamba}. Overall, the selective SSM leverages the strengths of RNNs, CNNs and Transformers - it maintains an unbounded context window like RNNs, can be parallelized like CNNs, and achieves content-aware reasoning like Transformers, while being more efficient than all three. This makes Mamba a promising foundation model for processing long sequences across various domains.
 
-\section{Application: Image Segmentation}
-Here we investigate Mamba-based architectures with regards to the task of image segmentation.
 
-\section{Input Data}\label{sec2}
-We shall be using a Brain MRI segmentation dataset found in \cite{dataset}. This dataset has been used in several papers regarding classification of the shape and severity of tumors, and provides an adequate dataset for research purposes in the field of medical image analysis, particularly in the area of brain MRI segmentation. Researchers have utilized this dataset in various studies focusing on the classification of tumor shapes and the assessment of tumor severity. With its comprehensive collection of brain MRI scans, along with corresponding segmentation masks, the dataset offers valuable resources for developing and evaluating algorithms aimed at automating tumor detection and analysis.
-
-The dataset contains brain MRI images along with their segmentation masks for 110 patients. There were a total of 3143 train images, 393 validation images, and 393 test images. The distribution of the tumor and non-tumor images is shown in Figure \ref{fig:datastats}.
-
-
-\section{Output Data}\label{sec3}
-The output of this model shall be segmentation masks for new, never before seen images.
-\begin{figure}[!t]
-    \centering
-    \includegraphics[width=\columnwidth]{imgs/data_stats.png}
-    \caption{Distributions of tumor and non-tumor images in the train, validation, and test datasets.}
-    \label{fig:datastats}
-\end{figure}
-
-
-\section{Compared Models}
+\section{Related Works}
 Prior to an analysis of how the Pyramidal U-Mamba compares, we shall explain what models we chose for comparison and why.
 
 For this our analysis, we compare four models against our own developed ones. The models are U-Net\cite{ronneberger2015unet}, ResNet18 \cite{he2016deep}, ResNet50, U-Mamba\cite{U-Mamba}, and SegFormer\cite{xie2021segformer}. Below we explain our choices.
@@ -267,6 +249,27 @@ The key innovation of the UltraLight VM-UNet is the proposed Parallel Vision Mam
 The UltraLight VM-UNet is reported to have only 0.049 million parameters and a computational cost of 0.060 GFLOPs, which is significantly lower than traditional convolutional neural networks and transformers used for image segmentation tasks. Despite its lightweight nature, the authors demonstrate that the UltraLight VM-UNet achieves competitive performance on three publicly available skin lesion segmentation datasets, outperforming several state-of-the-art lightweight models.
 
 The success of the UltraLight VM-UNet can be attributed to the authors' in-depth analysis of the key factors influencing the parameters of the Vision Mamba module. By identifying the number of input channels as a critical factor affecting the parameter count, they were able to design the PVM Layer to process features in parallel while keeping the overall channel count constant, leading to a significant reduction in parameters without compromising performance.
+
+
+
+\section{Application: Image Segmentation}
+Here we investigate Mamba-based architectures with regards to the task of image segmentation.
+
+\subsection{Input Data}\label{sec2}
+We shall be using a Brain MRI segmentation dataset found in \cite{dataset}. This dataset has been used in several papers regarding classification of the shape and severity of tumors, and provides an adequate dataset for research purposes in the field of medical image analysis, particularly in the area of brain MRI segmentation. Researchers have utilized this dataset in various studies focusing on the classification of tumor shapes and the assessment of tumor severity. With its comprehensive collection of brain MRI scans, along with corresponding segmentation masks, the dataset offers valuable resources for developing and evaluating algorithms aimed at automating tumor detection and analysis.
+
+The dataset contains brain MRI images along with their segmentation masks for 110 patients. There were a total of 3143 train images, 393 validation images, and 393 test images. The distribution of the tumor and non-tumor images is shown in Figure \ref{fig:datastats}.
+
+
+\subsection{Output Data}\label{sec3}
+The output of this model shall be segmentation masks for new, never before seen images.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.75\columnwidth]{imgs/data_stats.png}
+    \caption{Distributions of tumor and non-tumor images in the train, validation, and test datasets.}
+    \label{fig:datastats}
+\end{figure}
+
 
 \section{Our Models}
 
@@ -350,39 +353,56 @@ Model results are shown in Table \ref{tab:model_comparison} and Figures \ref{fig
     \label{fig:segs}
 \end{figure}
 
-\section{Results for Classification Task}
+
+\section{Application: Image Classification}
+Here we investigate Mamba-based architectures with regards to the task of image segmentation.
+
+\subsection{Input Data}\label{sec2}
 To further demonstrate the viability and versatility of the Mamba architecture, we conducted experiments on the CIFAR-10 dataset \cite{krizhevsky2009learning}, a widely-used benchmark for image classification tasks. CIFAR-10 consists of 60,000 32x32 color images across 10 classes, with 6,000 images per class. The dataset is split into 50,000 training images and 10,000 test images.
-For this experiment, we employed the Vision Mamba (ViM) architecture proposed by Zhu et al. \cite{zhu2024vision}. ViM is an efficient visual representation learning framework that leverages a bidirectional state space model to capture long-range dependencies in visual data. By combining the strengths of CNNs and SSMs, ViM aims to achieve competitive performance while maintaining computational efficiency.
+
 
 \begin{figure}[!t]
     \centering
-    \includegraphics[width=\columnwidth]{imgs/cifar_10.jpg}
-    \caption{Example images from CIFAR100.}
+    \includegraphics[width=0.75\columnwidth]{imgs/cifar_10.jpg}
+    \caption{Example images from CIFAR10.}
     \label{fig:cifar}
 \end{figure}
+
+
+\subsection{Output Data}\label{sec3}
+The output of this model will be a classification for one of the 10 classes in CIFAR10.
+
+
+
+\section{Image Classification Models}
+
+For this experiment, we employed the Vision Mamba (ViM) architecture proposed by Zhu et al. \cite{zhu2024vision}. ViM is an efficient visual representation learning framework that leverages a bidirectional state space model to capture long-range dependencies in visual data. By combining the strengths of CNNs and SSMs, ViM aims to achieve competitive performance while maintaining computational efficiency.
 
 We compared the performance of ViM against the Vision Transformer (ViT) architecture \cite{dosovitskiy2021image} on the CIFAR-10 dataset. The ViM model had 1,974,664 parameters, while the ViT had 1,767,602.
 Both models were trained for 100 epochs using the same experimental setup, including hyperparameters, optimization algorithm, and data augmentation techniques. Training and validation was done with batch size of 64, and upon every training iteration we do a validation iteration to obtain the validation scores. To see more on the training, please check our GitHub. The experiments were conducted on an NVIDIA GeForce RTX 3090 Ti GPU to ensure a fair comparison of training and validation times.
 Figure \ref{fig:ViMViTF1} presents the validation F1 score and loss curves for both ViM and ViT over the course of 100 epochs, Figure \ref{fig:ViMViTLoss} shows the validation loss values over the 100 epochs, while Figure \ref{fig:ViMViTTrainingValidationTime} compares the training and validation times for both models. Note that ViM achieves similar performance with less training and validation time.
+
+
+\section{Results for Classification Task}
 
 These experiments demonstrate that the Mamba architecture, as implemented in the ViM model, can achieve competitive performance on image classification tasks while maintaining computational efficiency. The results highlight the potential of Mamba-based models as an alternative to transformer-based approaches, particularly in scenarios where both accuracy and efficiency are crucial considerations.
 
 
 \begin{figure}[!t]
     \centering
-    \includegraphics[width=\columnwidth]{imgs/f1_comparison.png}
+    \includegraphics[width=0.75\columnwidth]{imgs/f1_comparison.png}
     \caption{F1 scores for ViM and ViT over 100 epochs.}
     \label{fig:ViMViTF1}
 \end{figure}
 \begin{figure}[!t]
     \centering
-    \includegraphics[width=\columnwidth]{imgs/loss_comparison.png}
+    \includegraphics[width=0.75\columnwidth]{imgs/loss_comparison.png}
     \caption{Loss scores for ViM and ViT over 100 epochs.}
     \label{fig:ViMViTLoss}
 \end{figure}
 \begin{figure}[!t]
     \centering
-    \includegraphics[width=\columnwidth]{imgs/time_comparison.png}
+    \includegraphics[width=0.75\columnwidth]{imgs/time_comparison.png}
     \caption{Training and validation time for ViT and ViM.}
     \label{fig:ViMViTTrainingValidationTime}
 \end{figure}
