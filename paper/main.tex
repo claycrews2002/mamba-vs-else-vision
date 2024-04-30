@@ -409,9 +409,14 @@ These experiments demonstrate that the Mamba architecture, as implemented in the
 \end{figure}
 
 \section{Conclusion}
-We investigate the Mamba architecture with regards to the vision tasks of segmentation and classification. We develop and fine-tune models for both tasks, showing that they can outperform the SOTA in parameter count or accuracy. We hope to show that there are viable alternatives to transformers, and that 
-transformer-level performance can be achieved with Mamba in the realm of computer vision.
+In this paper, we explored the application of the Mamba architecture, a variant of Structured State Space Sequence Models (SSMs), to vision tasks such as image segmentation and classification. We aimed to investigate whether Mamba-based models could achieve competitive performance compared to state-of-the-art models like Transformers, U-Net, and ResNet, while maintaining a low parameter count and computational efficiency.
+For the image segmentation task, we developed and fine-tuned several Mamba-based architectures, including UMambaBot-PP, UL-VM-UNet variations. Our results demonstrated that these models could have similar performance to SOTA models like U-Net, ResNet, and SegFormer, while requiring significantly fewer parameters. 
 
+Furthermore, we extended our experiments to the image classification task on the CIFAR-10 dataset. We employed the Vision Mamba (ViM) architecture and compared its performance to the Vision Transformer (ViT). The results indicated that ViM could achieve comparable accuracy to ViT while requiring less training and validation time, highlighting the computational efficiency of the Mamba-based approach.
+Overall, our work demonstrates the viability of Mamba and SSMs as efficient and effective alternatives to traditional models like Transformers, CNNs, and U-Net for vision tasks. The selective state spaces in Mamba blocks enable content-aware reasoning and efficient long-range dependency modeling, making them well-suited for tasks that require capturing global context while maintaining computational efficiency.
+
+Looking ahead, further research is needed to explore the potential of Mamba and SSMs across a wider range of vision tasks and datasets. Additionally, investigating techniques for optimizing the parameter efficiency and computational complexity of these models could lead to even more compact and efficient architectures for deployment on resource-constrained devices.
+In conclusion, our study contributes to the development of compact yet accurate models for image segmentation and classification, highlighting the potential of Mamba and SSMs as a promising foundation for efficient and effective vision models.
 
 \begin{thebibliography}{00}
     \bibitem{brown2020language} T. B. Brown et al., "Language Models are Few-Shot Learners," arXiv:2005.14165 [cs.CL], 2020.
