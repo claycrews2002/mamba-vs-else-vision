@@ -152,6 +152,10 @@ INPUT /home/lex/.miktex/texmfs/install/tex/latex/algorithms/algorithm.sty
 INPUT /home/lex/.miktex/texmfs/install/tex/latex/algorithms/algorithm.sty
 INPUT /home/lex/.miktex/texmfs/install/tex/latex/float/float.sty
 INPUT /home/lex/.miktex/texmfs/install/tex/latex/float/float.sty
+INPUT /home/lex/.miktex/texmfs/install/tex/latex/caption/caption.sty
+INPUT /home/lex/.miktex/texmfs/install/tex/latex/caption/caption.sty
+INPUT /home/lex/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+INPUT /home/lex/.miktex/texmfs/install/tex/latex/caption/caption3.sty
 INPUT /home/lex/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /home/lex/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./main.aux
@@ -244,7 +248,6 @@ INPUT ./imgs/data_stats.png
 INPUT ./imgs/data_stats.png
 INPUT /home/lex/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /home/lex/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx6.tfm
-INPUT /home/lex/.miktex/texmfs/install/fonts/tfm/adobe/times/ptmrc7t.tfm
 INPUT ./imgs/balls.png
 INPUT ./imgs/balls.png
 INPUT ./imgs/balls.png
@@ -268,8 +271,6 @@ INPUT ./imgs/cifar_10.jpg
 INPUT ./imgs/cifar_10.jpg
 INPUT /home/lex/.miktex/texmfs/install/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /home/lex/.miktex/texmfs/install/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT /home/lex/.miktex/texmfs/install/fonts/vf/adobe/times/ptmrc7t.vf
-INPUT /home/lex/.miktex/texmfs/install/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT ./imgs/f1_comparison.png
 INPUT ./imgs/f1_comparison.png
 INPUT ./imgs/f1_comparison.png

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.28)  28 APR 2024 13:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.28)  30 APR 2024 07:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -349,76 +349,70 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 \@float@every@algorithm=\toks26
 \c@algorithm=\count298
+) (/home/lex/.miktex/texmfs/install/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/home/lex/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen179
+\captionmargin=\dimen180
+\caption@leftmargin=\dimen181
+\caption@rightmargin=\dimen182
+\caption@width=\dimen183
+\caption@indent=\dimen184
+\caption@parindent=\dimen185
+\caption@hangindent=\dimen186
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi \fi  on input line 1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count299
+\c@continuedfloat=\count300
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
 ) (/home/lex/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count299
+\l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box57
-) (main.aux
-
-LaTeX Warning: Label `he2016deep' multiply defined.
-
-
-LaTeX Warning: Label `choromanski2020rethinking' multiply defined.
-
-
-LaTeX Warning: Label `gu2022efficiently' multiply defined.
-
-
-LaTeX Warning: Label `gu2023mamba' multiply defined.
-
-
-LaTeX Warning: Label `gu2022efficiently' multiply defined.
-
-
-LaTeX Warning: Label `gu2023mamba' multiply defined.
-
-
-LaTeX Warning: Label `xie2021segformer' multiply defined.
-
-
-LaTeX Warning: Label `gu2023mamba' multiply defined.
-
-
-LaTeX Warning: Label `he2016deep' multiply defined.
-
-
-LaTeX Warning: Label `krizhevsky2012imagenet' multiply defined.
-
-)
+) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 -- Lines per column: 56 (exact).
 (/home/lex/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count300
-\scratchdimen=\dimen179
+\scratchcounter=\count302
+\scratchdimen=\dimen187
 \scratchbox=\box58
-\nofMPsegments=\count301
-\nofMParguments=\count302
+\nofMPsegments=\count303
+\nofMParguments=\count304
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count303
-\MPscratchDim=\dimen180
-\MPnumerator=\count304
-\makeMPintoPDFobject=\count305
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen188
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
 \everyMPtoPDFconversion=\toks28
 ) (/home/lex/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -426,37 +420,34 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/home/lex/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 19.
  (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 38.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
  (/home/lex/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
  (/home/lex/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/home/lex/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}{/home/lex/.miktex/texmfs/install/fonts/enc/dvips/base/8r.enc}
 
 
 ] [2]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 169.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 170.
  [3]
-<imgs/data_stats.png, id=205, 571.13374pt x 992.70876pt>
+<imgs/data_stats.png, id=209, 571.13374pt x 992.70876pt>
 File: imgs/data_stats.png Graphic file (type png)
 <use imgs/data_stats.png>
-Package pdftex.def Info: imgs/data_stats.png  used on input line 240.
+Package pdftex.def Info: imgs/data_stats.png  used on input line 241.
 (pdftex.def)             Requested size: 252.0pt x 438.005pt.
- [4] [5
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.263 
-       <./imgs/data_stats.png (PNG copy)>]
-Underfull \hbox (badness 2744) in paragraph at lines 266--267
+ [4] [5 <./imgs/data_stats.png (PNG copy)>]
+Underfull \hbox (badness 2744) in paragraph at lines 267--268
 \OT1/ptm/m/n/10 mil-lion pa-ram-e-ters and a com-pu-ta-tional cost of 0.060
  []
 
@@ -464,137 +455,77 @@ Underfull \hbox (badness 2744) in paragraph at lines 266--267
 <imgs/balls.png, id=269, 990.70125pt x 592.2125pt>
 File: imgs/balls.png Graphic file (type png)
 <use imgs/balls.png>
-Package pdftex.def Info: imgs/balls.png  used on input line 340.
+Package pdftex.def Info: imgs/balls.png  used on input line 341.
 (pdftex.def)             Requested size: 252.0pt x 150.63718pt.
 <imgs/masks.png, id=270, 793.96625pt x 494.84875pt>
 File: imgs/masks.png Graphic file (type png)
 <use imgs/masks.png>
-Package pdftex.def Info: imgs/masks.png  used on input line 347.
+Package pdftex.def Info: imgs/masks.png  used on input line 348.
 (pdftex.def)             Requested size: 252.0pt x 157.06364pt.
 <imgs/cifar_10.jpg, id=274, 939.51pt x 727.71875pt>
 File: imgs/cifar_10.jpg Graphic file (type jpg)
 <use imgs/cifar_10.jpg>
-Package pdftex.def Info: imgs/cifar_10.jpg  used on input line 357.
+Package pdftex.def Info: imgs/cifar_10.jpg  used on input line 359.
 (pdftex.def)             Requested size: 252.0pt x 195.1875pt.
- [7
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.365 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.365 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.365 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.365 
-       <./imgs/balls.png (PNG copy)> <./imgs/masks.png> <./imgs/cifar_10.jpg>]
-<imgs/f1_comparison.png, id=294, 578.16pt x 433.62pt>
+ [7 <./imgs/balls.png (PNG copy)> <./imgs/masks.png> <./imgs/cifar_10.jpg>]
+<imgs/f1_comparison.png, id=294, 538.01pt x 416.55624pt>
 File: imgs/f1_comparison.png Graphic file (type png)
 <use imgs/f1_comparison.png>
-Package pdftex.def Info: imgs/f1_comparison.png  used on input line 371.
-(pdftex.def)             Requested size: 252.0pt x 189.00032pt.
-<imgs/loss_comparison.png, id=295, 578.16pt x 433.62pt>
+Package pdftex.def Info: imgs/f1_comparison.png  used on input line 373.
+(pdftex.def)             Requested size: 252.0pt x 195.11406pt.
+<imgs/loss_comparison.png, id=295, 538.01pt x 416.55624pt>
 File: imgs/loss_comparison.png Graphic file (type png)
 <use imgs/loss_comparison.png>
-Package pdftex.def Info: imgs/loss_comparison.png  used on input line 377.
-(pdftex.def)             Requested size: 252.0pt x 189.00032pt.
-<imgs/time_comparison.png, id=296, 578.16pt x 433.62pt>
+Package pdftex.def Info: imgs/loss_comparison.png  used on input line 379.
+(pdftex.def)             Requested size: 252.0pt x 195.11406pt.
+<imgs/time_comparison.png, id=296, 663.47874pt x 490.83376pt>
 File: imgs/time_comparison.png Graphic file (type png)
 <use imgs/time_comparison.png>
-Package pdftex.def Info: imgs/time_comparison.png  used on input line 383.
-(pdftex.def)             Requested size: 252.0pt x 189.00032pt.
+Package pdftex.def Info: imgs/time_comparison.png  used on input line 385.
+(pdftex.def)             Requested size: 252.0pt x 186.42888pt.
 
-Underfull \hbox (badness 2197) in paragraph at lines 398--399
-[]\OT1/ptm/m/n/8 K. Choro-man-ski et al., "Re-think-ing At-ten-tion with Per-form-ers,"
+Underfull \hbox (badness 5302) in paragraph at lines 402--403
+[]\OT1/ptm/m/n/8 K. Si-monyan and A. Zis-ser-man, \Pub-lished as a con-fer-ence
  []
 
-[8
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.425 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.425 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.425 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{cite.he2016deep}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.425 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{cite.choromanski2020rethinking}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.425 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2022efficiently}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.425 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2023mamba}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.425 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2022efficiently}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.425 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2023mamba}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.425 
-       <./imgs/f1_comparison.png> <./imgs/loss_comparison.png> <./imgs/time_comparison.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
+
+Underfull \hbox (badness 4242) in paragraph at lines 402--403
+\OT1/ptm/m/n/8 pa-per at ICLR 2015 VERY DEEP CON-VO-LU-TIONAL NET-
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 403--404
+[]\OT1/ptm/m/n/8 C. Szegedy et al., \Go-ing deeper with con-vo-lu-tions." Avail-able:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+[]\OT1/ptm/m/n/8 A. Howard et al., \Mo-bileNets: Ef-fi-cient Con-vo-lu-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+\OT1/ptm/m/n/8 Neu-ral Net-works for Mo-bile Vi-sion Ap-pli-ca-tions." Avail-able:
+ []
+
+[8 <./imgs/f1_comparison.png> <./imgs/loss_comparison.png> <./imgs/time_comparison.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
 []\OT1/ptm/m/n/8 \Brain MRI seg-men-ta-tion," www.kaggle.com.
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{cite.xie2021segformer}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.438     \bibitem{xie2021segformer}
-                                     E. Xie, W. Wang, Z. Yu, A. Anandkumar, ...
-pdfTeX warning (ext4): destination with the same identifier (name{cite.gu2023mamba}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.440     \bibitem{gu2023mamba}
-                                A. Gu and T. Dao, "Mamba: Linear-Time Sequen...
-pdfTeX warning (ext4): destination with the same identifier (name{cite.he2016deep}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.441     \bibitem{he2016deep}
-                               K. He, X. Zhang, S. Ren, and J. Sun, "Deep Re...
-pdfTeX warning (ext4): destination with the same identifier (name{cite.krizhevsky2012imagenet}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.443     \bibitem{krizhevsky2012imagenet}
-                                           A. Krizhevsky, I. Sutskever, and ...
-Underfull \hbox (badness 5231) in paragraph at lines 446--447
+Underfull \hbox (badness 5231) in paragraph at lines 424--425
 \OT1/ptm/m/n/8 \Vi-sion Mamba: Ef-fi-cient Vi-sual Rep-re-sen-ta-tion Learn-ing with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 \OT1/ptm/m/n/8 Bidi-rec-tional State Space Model," arXiv.org, Feb. 10, 2024.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
+[]\OT1/ptm/m/n/8 U. Jamil, \hkproj/mamba-notes," GitHub, Apr. 27, 2024.
  []
 
 
@@ -615,25 +546,21 @@ Before submitting the final camera ready copy, remember to:
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 68B99DF60CCB7BAA49AC0E401FCC2D17;2868.
+(rerunfilecheck)             Checksum: F8BBA06A6AAE86A76360195FEBC24D6F;3117.
  ) 
 Here is how much of TeX's memory you used:
- 11588 strings out of 476334
- 180497 string characters out of 5793173
- 1955493 words of memory out of 5000000
- 33439 multiletter control sequences out of 15000+600000
- 600556 words of font info for 125 fonts, out of 8000000 for 9000
+ 12890 strings out of 476334
+ 205811 string characters out of 5793173
+ 1956493 words of memory out of 5000000
+ 34739 multiletter control sequences out of 15000+600000
+ 598832 words of font info for 123 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,14n,79p,1504b,578s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,79p,1504b,577s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/lex/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/lex/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/lex/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/lex/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/lex/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/lex/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/lex/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/lex/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/lex/.miktex/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></home/lex/.miktex/texmfs/install/fonts/type1/urw/times/utmbi8a.pfb></home/lex/.miktex/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></home/lex/.miktex/texmfs/install/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (9 pages, 904932 bytes).
+Output written on main.pdf (9 pages, 926489 bytes).
 PDF statistics:
- 391 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
+ 388 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
  236 words of extra memory for PDF output out of 10000 (max. 10000000)
 
