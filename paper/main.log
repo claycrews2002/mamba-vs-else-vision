@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.22)  30 APR 2024 08:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.22)  30 APR 2024 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -352,52 +352,57 @@ See the caption package documentation for explanation.
 \c@continuedfloat=\count278
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks24
+\AP@partial=\box51
+\AP@footins=\box52
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count279
-\l__pdf_internal_box=\box51
+\l__pdf_internal_box=\box53
 ) (/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 -- Lines per column: 56 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count280
 \scratchdimen=\dimen180
-\scratchbox=\box52
+\scratchbox=\box54
 \nofMPsegments=\count281
 \nofMParguments=\count282
-\everyMPshowfont=\toks24
+\everyMPshowfont=\toks25
 \MPscratchCnt=\count283
 \MPscratchDim=\dimen181
 \MPnumerator=\count284
 \makeMPintoPDFobject=\count285
-\everyMPtoPDFconversion=\toks25
+\everyMPtoPDFconversion=\toks26
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring OFF on input line 19.
+\AtBeginShipoutBox=\box55
+Package hyperref Info: Link coloring OFF on input line 20.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -407,118 +412,182 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count286
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
-LaTeX Info: Redefining \nameref on input line 19.
+LaTeX Info: Redefining \ref on input line 20.
+LaTeX Info: Redefining \pageref on input line 20.
+LaTeX Info: Redefining \nameref on input line 20.
  (/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.out) (/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 39.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ] [2]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 170.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 171.
  [3] [4]
-Underfull \hbox (badness 2744) in paragraph at lines 249--250
+Underfull \hbox (badness 2744) in paragraph at lines 250--251
 \OT1/ptm/m/n/10 mil-lion pa-ram-e-ters and a com-pu-ta-tional cost of 0.060
  []
 
-<imgs/data_stats.png, id=266, 571.13374pt x 992.70876pt>
+<imgs/data_stats.png, id=274, 571.13374pt x 992.70876pt>
 File: imgs/data_stats.png Graphic file (type png)
 <use imgs/data_stats.png>
-Package pdftex.def Info: imgs/data_stats.png  used on input line 268.
+Package pdftex.def Info: imgs/data_stats.png  used on input line 269.
 (pdftex.def)             Requested size: 189.0pt x 328.50375pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5]
-<imgs/balls.png, id=282, 713.3049pt x 426.393pt>
+<imgs/balls.png, id=290, 713.3049pt x 426.393pt>
 File: imgs/balls.png Graphic file (type png)
 <use imgs/balls.png>
-Package pdftex.def Info: imgs/balls.png  used on input line 344.
+Package pdftex.def Info: imgs/balls.png  used on input line 345.
 (pdftex.def)             Requested size: 252.0pt x 150.63861pt.
-<imgs/masks.png, id=284, 793.96625pt x 494.84875pt>
+<imgs/masks.png, id=292, 793.96625pt x 494.84875pt>
 File: imgs/masks.png Graphic file (type png)
 <use imgs/masks.png>
-Package pdftex.def Info: imgs/masks.png  used on input line 351.
+Package pdftex.def Info: imgs/masks.png  used on input line 352.
 (pdftex.def)             Requested size: 252.0pt x 157.06364pt.
  [6 </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/data_stats.png (PNG copy)>]
-<imgs/cifar_10.jpg, id=295, 939.51pt x 727.71875pt>
+<imgs/cifar_10.jpg, id=303, 939.51pt x 727.71875pt>
 File: imgs/cifar_10.jpg Graphic file (type jpg)
 <use imgs/cifar_10.jpg>
-Package pdftex.def Info: imgs/cifar_10.jpg  used on input line 366.
+Package pdftex.def Info: imgs/cifar_10.jpg  used on input line 367.
 (pdftex.def)             Requested size: 189.0pt x 146.38507pt.
-<imgs/f1_comparison.png, id=301, 538.01pt x 416.55624pt>
+<imgs/f1_comparison.png, id=309, 538.01pt x 416.55624pt>
 File: imgs/f1_comparison.png Graphic file (type png)
 <use imgs/f1_comparison.png>
-Package pdftex.def Info: imgs/f1_comparison.png  used on input line 393.
+Package pdftex.def Info: imgs/f1_comparison.png  used on input line 394.
 (pdftex.def)             Requested size: 189.0pt x 146.33078pt.
  [7 </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/balls.png> </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/masks.png> </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/cifar_10.jpg>]
-<imgs/loss_comparison.png, id=315, 538.01pt x 416.55624pt>
+<imgs/loss_comparison.png, id=323, 538.01pt x 416.55624pt>
 File: imgs/loss_comparison.png Graphic file (type png)
 <use imgs/loss_comparison.png>
-Package pdftex.def Info: imgs/loss_comparison.png  used on input line 399.
+Package pdftex.def Info: imgs/loss_comparison.png  used on input line 400.
 (pdftex.def)             Requested size: 189.0pt x 146.33078pt.
-<imgs/time_comparison.png, id=316, 663.47874pt x 490.83376pt>
+<imgs/time_comparison.png, id=324, 663.47874pt x 490.83376pt>
 File: imgs/time_comparison.png Graphic file (type png)
 <use imgs/time_comparison.png>
-Package pdftex.def Info: imgs/time_comparison.png  used on input line 405.
+Package pdftex.def Info: imgs/time_comparison.png  used on input line 406.
 (pdftex.def)             Requested size: 189.0pt x 139.82166pt.
 
-Underfull \hbox (badness 5302) in paragraph at lines 422--423
+Underfull \hbox (badness 5302) in paragraph at lines 423--424
 []\OT1/ptm/m/n/8 K. Si-monyan and A. Zis-ser-man, \Pub-lished as a con-fer-ence
  []
 
 
-Underfull \hbox (badness 4242) in paragraph at lines 422--423
+Underfull \hbox (badness 4242) in paragraph at lines 423--424
 \OT1/ptm/m/n/8 pa-per at ICLR 2015 VERY DEEP CON-VO-LU-TIONAL NET-
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 423--424
+Underfull \hbox (badness 1546) in paragraph at lines 424--425
 []\OT1/ptm/m/n/8 C. Szegedy et al., \Go-ing deeper with con-vo-lu-tions." Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
 []\OT1/ptm/m/n/8 A. Howard et al., \Mo-bileNets: Ef-fi-cient Con-vo-lu-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
 \OT1/ptm/m/n/8 Neu-ral Net-works for Mo-bile Vi-sion Ap-pli-ca-tions." Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 []\OT1/ptm/m/n/8 \Brain MRI seg-men-ta-tion," www.kaggle.com.
  []
 
 [8 </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/f1_comparison.png> </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/loss_comparison.png> </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/time_comparison.png>]
-Underfull \hbox (badness 5231) in paragraph at lines 444--445
+Underfull \hbox (badness 5231) in paragraph at lines 445--446
 \OT1/ptm/m/n/8 \Vi-sion Mamba: Ef-fi-cient Vi-sual Rep-re-sen-ta-tion Learn-ing with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 \OT1/ptm/m/n/8 Bidi-rec-tional State Space Model," arXiv.org, Feb. 10, 2024.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
 []\OT1/ptm/m/n/8 U. Jamil, \hkproj/mamba-notes," GitHub, Apr. 27, 2024.
  []
+
+<imgs/14_9.png, id=335, 1806.75pt x 478.4274pt>
+File: imgs/14_9.png Graphic file (type png)
+<use imgs/14_9.png>
+Package pdftex.def Info: imgs/14_9.png  used on input line 457.
+(pdftex.def)             Requested size: 516.0pt x 136.63792pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/22_4.png, id=336, 1806.75pt x 478.4274pt>
+File: imgs/22_4.png Graphic file (type png)
+<use imgs/22_4.png>
+Package pdftex.def Info: imgs/22_4.png  used on input line 462.
+(pdftex.def)             Requested size: 516.0pt x 136.63792pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/13_4.png, id=337, 1806.75pt x 478.4274pt>
+File: imgs/13_4.png Graphic file (type png)
+<use imgs/13_4.png>
+Package pdftex.def Info: imgs/13_4.png  used on input line 467.
+(pdftex.def)             Requested size: 516.0pt x 136.63792pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/19_4.png, id=338, 1806.75pt x 478.4274pt>
+File: imgs/19_4.png Graphic file (type png)
+<use imgs/19_4.png>
+Package pdftex.def Info: imgs/19_4.png  used on input line 473.
+(pdftex.def)             Requested size: 516.0pt x 136.63792pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/0_0.png, id=339, 1806.75pt x 478.4274pt>
+File: imgs/0_0.png Graphic file (type png)
+<use imgs/0_0.png>
+Package pdftex.def Info: imgs/0_0.png  used on input line 479.
+(pdftex.def)             Requested size: 516.0pt x 136.63792pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/12_2.png, id=340, 1806.75pt x 478.4274pt>
+File: imgs/12_2.png Graphic file (type png)
+<use imgs/12_2.png>
+Package pdftex.def Info: imgs/12_2.png  used on input line 485.
+(pdftex.def)             Requested size: 516.0pt x 136.63792pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/22_3.png, id=341, 1806.75pt x 478.4274pt>
+File: imgs/22_3.png Graphic file (type png)
+<use imgs/22_3.png>
+Package pdftex.def Info: imgs/22_3.png  used on input line 489.
+(pdftex.def)             Requested size: 516.0pt x 136.63792pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/22_7.png, id=342, 1806.75pt x 478.4274pt>
+File: imgs/22_7.png Graphic file (type png)
+<use imgs/22_7.png>
+Package pdftex.def Info: imgs/22_7.png  used on input line 493.
+(pdftex.def)             Requested size: 516.0pt x 136.63792pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ** Conference Paper **
@@ -531,31 +600,45 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 449.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 497.
 [9
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 449.
+
+LaTeX Warning: Text page 10 contains only floats.
+
+
+Overfull \vbox (10.1521pt too high) has occurred while \output is active []
+
+
+
+LaTeX Warning: Text page 10 contains only floats.
+
+
+Overfull \vbox (10.1521pt too high) has occurred while \output is active []
+
+ [10 </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/14_9.png> </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/22_4.png> </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/13_4.png> </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/19_4.png>] [11 </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/0_0.png> </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/12_2.png> </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/22_3.png> </share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/22_7.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
  (/share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 449.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 449.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A1BA2AB5BF56DAFCFA50278D89319926;1703.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 449.
+(rerunfilecheck)             Checksum: E4F0DD21F340FB3FA38A875C57C10E11;1831.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 497.
  ) 
 Here is how much of TeX's memory you used:
- 9275 strings out of 481239
- 143567 string characters out of 5920377
- 420967 words of memory out of 5000000
- 24266 multiletter control sequences out of 15000+600000
+ 9359 strings out of 481239
+ 144891 string characters out of 5920377
+ 421534 words of memory out of 5000000
+ 24325 multiletter control sequences out of 15000+600000
  573101 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,14n,42p,1490b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.pdf (9 pages, 868841 bytes).
+Output written on /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.pdf (11 pages, 2150094 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 359 compressed objects within 4 object streams
- 114 named destinations out of 1000 (max. 500000)
- 268 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 442 PDF objects out of 1000 (max. 8388607)
+ 385 compressed objects within 4 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 324 words of extra memory for PDF output out of 10000 (max. 10000000)
 

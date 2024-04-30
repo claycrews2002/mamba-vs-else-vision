@@ -9,7 +9,8 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{algorithm}
-\usepackage{caption} % for caption setup
+\usepackage{caption} 
+\usepackage{afterpage}
 
 \newcommand{\gr}[1]{\textcolor{green}{#1}}
 \newcommand{\mbfb}[1]{\mathbf{\bar{{#1}}}}
@@ -445,5 +446,52 @@ transformer-level performance can be achieved with Mamba in the realm of compute
     \bibitem{modelSize} H. Naveed et al., “A Comprehensive Overview of Large Language Models.” Available: https://arxiv.org/pdf/2307.06435
     \bibitem{mambaNotes} U. Jamil, “hkproj/mamba-notes,” GitHub, Apr. 27, 2024. https://github.com/hkproj/mamba-notes (accessed Apr. 30, 2024).
 \end{thebibliography}
+
+
+\appendix
+
+\subsection{Supplementary Figures} \label{supp_figs}
+
+\begin{figure*}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/14_9.png}
+\end{figure*}
+
+\begin{figure*}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/22_4.png}
+\end{figure*}
+
+\begin{figure*}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/13_4.png}
+    \caption{In some cases, such as this one, it was observed that models with too few parameters (UltraLight-VM-UNet, UltraLight-VM-UNet-v2) don't detect sections of the tumor during segmentation.}
+\end{figure*}
+
+\begin{figure*}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/19_4.png}
+    \caption{UltraLight-VM-UNet-v5 achieved segmentation results equivalent to UMambaBot with approximately 9.1 M less parameters.}
+\end{figure*}
+
+\begin{figure*}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/0_0.png}
+    \caption{An example of models with pyramidal pooling in the PVM blocks (UltraLight-VM-UNet-v4, UltraLight-VM-UNet-v6) achieved an improvement over a model without (UltraLight-VM-UNet-v5).}
+\end{figure*}
+
+\begin{figure*}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/12_2.png}
+\end{figure*}
+\begin{figure*}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/22_3.png}
+\end{figure*}
+\begin{figure*}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{imgs/22_7.png}
+\end{figure*}
+
 
 \end{document}
