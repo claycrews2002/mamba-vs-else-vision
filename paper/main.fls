@@ -252,6 +252,10 @@ INPUT /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/loss_comparison
 INPUT /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/time_comparison.png
 INPUT /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/time_comparison.png
 INPUT /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/time_comparison.png
+INPUT /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.bbl
+INPUT /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/main.bbl
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/14_9.png
 INPUT /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/14_9.png
 INPUT /share/jccrews/mamba/paper/mamba-vs-else-vision/paper/imgs/14_9.png
