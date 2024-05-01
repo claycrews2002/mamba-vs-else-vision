@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex main"] 1714490425 "main.aux" "main.bbl" "main" 1714521909
+["bibtex main"] 1714490425 "main.aux" "main.bbl" "main" 1714522115
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "main.aux" 1714521909 11262 54cce02b5b6edc5b7411533a9aad2793 "pdflatex"
+  "main.aux" 1714522107 11262 54cce02b5b6edc5b7411533a9aad2793 "pdflatex"
   "refs.bib" 1714521893 9820 c95084003c650f6ea027a1c81d03deeb ""
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1714521907 "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.tex" "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.pdf" "main" 1714521909
+["pdflatex"] 1714522105 "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.tex" "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.pdf" "main" 1714522115
   "/etc/texmf/web2c/texmf.cnf" 1602549848 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.aux" 1714521909 11262 54cce02b5b6edc5b7411533a9aad2793 ""
-  "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.tex" 1714521893 47190 5a8a6a0125e752e7441399a0606a4158 ""
+  "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.aux" 1714522107 11262 54cce02b5b6edc5b7411533a9aad2793 ""
+  "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.tex" 1714522115 47208 2d40a5fff0d5f9ca7dd886e08e6f28c8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -138,14 +138,14 @@
   "imgs/loss_comparison.png" 1714521824 53772 82b9604d3b23ea85b15558ca2524d4c3 ""
   "imgs/masks.png" 1714521824 423116 f14cba0e4db28a38bd6eec0c8585f882 ""
   "imgs/time_comparison.png" 1714521824 27572 e58dd1808084ddcf0fdd543c12d17416 ""
-  "main.aux" 1714521909 11262 54cce02b5b6edc5b7411533a9aad2793 "pdflatex"
+  "main.aux" 1714522107 11262 54cce02b5b6edc5b7411533a9aad2793 "pdflatex"
   "main.bbl" 1714521897 4612 a04bc4423a5b287b3493a9e3186dc936 "bibtex main"
-  "main.out" 1714521909 1831 e4f0dd21f340fb3fa38a875c57c10e11 "pdflatex"
-  "main.tex" 1714521893 47190 5a8a6a0125e752e7441399a0606a4158 ""
+  "main.out" 1714522107 1831 e4f0dd21f340fb3fa38a875c57c10e11 "pdflatex"
+  "main.tex" 1714522115 47208 2d40a5fff0d5f9ca7dd886e08e6f28c8 ""
   (generated)
-  "main.log"
-  "main.aux"
-  "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.pdf"
-  "main.pdf"
-  "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.log"
   "main.out"
+  "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.pdf"
+  "main.aux"
+  "main.pdf"
+  "main.log"
+  "/share/jccrews/mamba/mamba-vs-else-vision/paper/main.log"
