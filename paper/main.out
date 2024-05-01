@@ -2,24 +2,30 @@
 \BOOKMARK [1][-]{section.2}{Current Vision Task SOTA}{}% 2
 \BOOKMARK [1][-]{section.3}{State Space Models \(SSMs\)}{}% 3
 \BOOKMARK [1][-]{section.4}{Mamba}{}% 4
-\BOOKMARK [1][-]{section.5}{Application: Image Segmentation}{}% 5
-\BOOKMARK [1][-]{section.6}{Input Data}{}% 6
-\BOOKMARK [1][-]{section.7}{Output Data}{}% 7
-\BOOKMARK [1][-]{section.8}{Compared Models}{}% 8
-\BOOKMARK [2][-]{subsection.8.1}{U-Net}{section.8}% 9
-\BOOKMARK [2][-]{subsection.8.2}{ResNet}{section.8}% 10
-\BOOKMARK [2][-]{subsection.8.3}{U-Mamba}{section.8}% 11
-\BOOKMARK [2][-]{subsection.8.4}{SegFormer}{section.8}% 12
-\BOOKMARK [2][-]{subsection.8.5}{UltraLight VM-UNet}{section.8}% 13
-\BOOKMARK [1][-]{section.9}{Our Models}{}% 14
-\BOOKMARK [2][-]{subsection.9.1}{UMambaBot-PP}{section.9}% 15
-\BOOKMARK [2][-]{subsection.9.2}{UL-VM-UNet-v1}{section.9}% 16
-\BOOKMARK [2][-]{subsection.9.3}{UL-VM-UNet-v2}{section.9}% 17
-\BOOKMARK [2][-]{subsection.9.4}{UL-VM-UNet-v3}{section.9}% 18
-\BOOKMARK [2][-]{subsection.9.5}{UL-VM-UNet-v4}{section.9}% 19
-\BOOKMARK [2][-]{subsection.9.6}{UL-VM-UNet-v5}{section.9}% 20
-\BOOKMARK [2][-]{subsection.9.7}{UL-VM-UNet-v6}{section.9}% 21
-\BOOKMARK [1][-]{section.10}{Results}{}% 22
-\BOOKMARK [1][-]{section.11}{Results}{}% 23
-\BOOKMARK [1][-]{section.12}{Conclusion}{}% 24
-\BOOKMARK [1][-]{section*.5}{References}{}% 25
+\BOOKMARK [1][-]{section.5}{Related Works}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{U-Net}{section.5}% 6
+\BOOKMARK [2][-]{subsection.5.2}{ResNet}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.3}{U-Mamba}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.4}{SegFormer}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.5}{UltraLight VM-UNet}{section.5}% 10
+\BOOKMARK [1][-]{section.6}{Application: Image Segmentation}{}% 11
+\BOOKMARK [2][-]{subsection.6.1}{Input Data}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.2}{Output Data}{section.6}% 13
+\BOOKMARK [1][-]{section.7}{Our Models}{}% 14
+\BOOKMARK [2][-]{subsection.7.1}{UMambaBot-PP}{section.7}% 15
+\BOOKMARK [2][-]{subsection.7.2}{UL-VM-UNet-v1}{section.7}% 16
+\BOOKMARK [2][-]{subsection.7.3}{UL-VM-UNet-v2}{section.7}% 17
+\BOOKMARK [2][-]{subsection.7.4}{UL-VM-UNet-v3}{section.7}% 18
+\BOOKMARK [2][-]{subsection.7.5}{UL-VM-UNet-v4}{section.7}% 19
+\BOOKMARK [2][-]{subsection.7.6}{UL-VM-UNet-v5}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.7}{UL-VM-UNet-v6}{section.7}% 21
+\BOOKMARK [1][-]{section.8}{Results for Segmentation Task}{}% 22
+\BOOKMARK [1][-]{section.9}{Application: Image Classification}{}% 23
+\BOOKMARK [2][-]{subsection.9.1}{Input Data}{section.9}% 24
+\BOOKMARK [2][-]{subsection.9.2}{Output Data}{section.9}% 25
+\BOOKMARK [1][-]{section.10}{Image Classification Models}{}% 26
+\BOOKMARK [1][-]{section.11}{Results for Classification Task}{}% 27
+\BOOKMARK [1][-]{section.12}{Conclusion}{}% 28
+\BOOKMARK [1][-]{section*.13}{References}{}% 29
+\BOOKMARK [1][-]{section*.14}{Appendix}{}% 30
+\BOOKMARK [2][-]{subsection.Appendix.A.1}{Supplementary Figures}{section*.14}% 31
